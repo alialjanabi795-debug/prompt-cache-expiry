@@ -1,0 +1,37 @@
+# Tool execution time on the trajectory's SOURCE container (seconds). The device model multiplies
+# by tool_speed_factor and by the thermal tool factor.
+# MEASURED where possible: pytest "N passed in X s", unittest "Ran N tests in X s", OpenHands
+# "no new output after N seconds" / "timed out after N seconds" (about 17% of bash calls in a
+# 500-trajectory probe). Measured pytest/unittest times exclude interpreter start-up and import,
+# so measured_overhead_s is added. Everything else: log-normal priors (ASSUMPTIONS) by subtype.
+use_measured: true
+measured_overhead_s: 0.8
+measured_jitter_sigma: 0.1
+measured_max_s: 1800      # deviation D8: implausible / non-shell durations fall back to priors
+measured_tools: [execute_bash, bash]
+default: {median_s: 0.5, sigma: 1.0}
+priors:
+  view_file:      {median_s: 0.03, sigma: 0.5}
+  view_dir:       {median_s: 0.08, sigma: 0.5}
+  create:         {median_s: 0.03, sigma: 0.5}
+  str_replace:    {median_s: 0.03, sigma: 0.5}
+  insert:         {median_s: 0.03, sigma: 0.5}
+  undo_edit:      {median_s: 0.03, sigma: 0.5}
+  edit_other:     {median_s: 0.03, sigma: 0.5}
+  search:         {median_s: 0.30, sigma: 1.0}
+  read:           {median_s: 0.05, sigma: 0.7}
+  navigate:       {median_s: 0.10, sigma: 1.0}
+  shell_misc:     {median_s: 0.05, sigma: 0.5}
+  shell_write:    {median_s: 0.10, sigma: 0.7}
+  test_runner:    {median_s: 3.00, sigma: 1.2}
+  test_script:    {median_s: 1.50, sigma: 1.0}
+  build_install:  {median_s: 15.0, sigma: 1.0}
+  run_script:     {median_s: 1.50, sigma: 1.0}
+  python_inline:  {median_s: 0.80, sigma: 0.8}
+  shell_other:    {median_s: 0.50, sigma: 1.0}
+  wait_process:   {median_s: 10.0, sigma: 0.5}
+  sleep:          {median_s: 5.0,  sigma: 0.5}
+  think:          {median_s: 0.0,  sigma: 0.0}
+  plan:           {median_s: 0.0,  sigma: 0.0}
+  finish:         {median_s: 0.0,  sigma: 0.0}
+  message:        {median_s: 0.0,  sigma: 0.0}

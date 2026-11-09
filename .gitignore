@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+data/raw/
+results/sweep*/
+results/figures/*.png
+results/figures/*.svg
+results/calib/last_prompt_*.txt
+results/calib/server_*.log
+output/

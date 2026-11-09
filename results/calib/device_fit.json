@@ -1,0 +1,35 @@
+{
+  "source": "results/calib/replay_main.jsonl",
+  "n_steps": 49,
+  "duration_min": 60.448025262355806,
+  "final_ctx": 53331,
+  "prefill_tps_at_ctx0": 42.61802965691388,
+  "prefill_ctx_double_tokens": 24631.199053033648,
+  "prefill_overhead_s": 2.731437107218171,
+  "prefill_fit_r2": 0.9988068971906578,
+  "decode_tps_at_ctx0": 3.6498108871459003,
+  "decode_ctx_double_tokens": 36408.020790591,
+  "decode_fit_r2": 0.9822032491964666,
+  "prefill_decode_ratio": 11.676777502913465,
+  "drift_prefill_per_min": 0.0015573986994889947,
+  "drift_decode_per_min": -4.082535724961846e-05,
+  "prefill_tps_observed": {
+    "p10": 12.910708296921127,
+    "median": 17.241572587386138,
+    "p90": 26.555857005200316
+  },
+  "decode_tps_observed": {
+    "first_5": 2.8817890390198504,
+    "last_5": 1.5116422522079573
+  },
+  "mem_final_gib": {
+    "cache": 5.309078216552734,
+    "rss": 3.8557167053222656,
+    "shmem": 0.0,
+    "mapped_file": 5.2938690185546875,
+    "swap": 0.0,
+    "inactive_file": 0.01470947265625,
+    "active_file": 5.294368743896484,
+    "usage": 9.183769226074219
+  }
+}

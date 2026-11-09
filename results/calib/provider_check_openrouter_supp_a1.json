@@ -1,0 +1,1143 @@
+{
+  "run_at": "2026-10-20T19:44:32Z",
+  "backend": "openrouter",
+  "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+  "models": {
+    "anthropic": {
+      "slug": "anthropic/claude-opus-4.8",
+      "order": "anthropic",
+      "provider_name": "Anthropic",
+      "ping_max_tokens": 1
+    },
+    "openai": {
+      "slug": "openai/gpt-5.6-sol",
+      "order": "openai",
+      "provider_name": "OpenAI",
+      "ping_max_tokens": 16
+    }
+  },
+  "provider_routing": {
+    "anthropic": {
+      "order": [
+        "anthropic"
+      ],
+      "allow_fallbacks": false
+    },
+    "openai": {
+      "order": [
+        "openai"
+      ],
+      "allow_fallbacks": false
+    }
+  },
+  "max_tokens_0_probe": "accepted but ignored by OpenRouter (full generation billed); smallest honoured value: anthropic 1, openai 16",
+  "plan": {
+    "C5_extend": {
+      "provider": "anthropic",
+      "ttl": "5m",
+      "repeats": 3,
+      "steps": [
+        [
+          0,
+          "write",
+          "write"
+        ],
+        [
+          15,
+          "ping",
+          "hit"
+        ],
+        [
+          30,
+          "extend",
+          "extend"
+        ],
+        [
+          45,
+          "generate",
+          "hit"
+        ]
+      ]
+    },
+    "C5_hit270": {
+      "provider": "anthropic",
+      "ttl": "5m",
+      "repeats": 6,
+      "steps": [
+        [
+          0,
+          "write",
+          "write"
+        ],
+        [
+          270,
+          "read",
+          "hit"
+        ]
+      ]
+    },
+    "C5_miss330": {
+      "provider": "anthropic",
+      "ttl": "5m",
+      "repeats": 6,
+      "steps": [
+        [
+          0,
+          "write",
+          "write"
+        ],
+        [
+          330,
+          "read",
+          "miss"
+        ]
+      ]
+    },
+    "C5_refresh": {
+      "provider": "anthropic",
+      "ttl": "5m",
+      "repeats": 6,
+      "steps": [
+        [
+          0,
+          "write",
+          "write"
+        ],
+        [
+          240,
+          "read",
+          "hit"
+        ],
+        [
+          420,
+          "read",
+          "hit"
+        ]
+      ]
+    },
+    "C5_min1500": {
+      "provider": "anthropic",
+      "ttl": "5m",
+      "repeats": 2,
+      "steps": [
+        [
+          0,
+          "write",
+          "write"
+        ],
+        [
+          20,
+          "read",
+          "hit"
+        ]
+      ]
+    },
+    "C1h_hit3300": {
+      "provider": "anthropic",
+      "ttl": "1h",
+      "repeats": 5,
+      "steps": [
+        [
+          0,
+          "write",
+          "write"
+        ],
+        [
+          3300,
+          "read",
+          "hit"
+        ]
+      ]
+    },
+    "C1h_miss3900": {
+      "provider": "anthropic",
+      "ttl": "1h",
+      "repeats": 5,
+      "steps": [
+        [
+          0,
+          "write",
+          "write"
+        ],
+        [
+          3900,
+          "read",
+          "miss"
+        ]
+      ]
+    },
+    "C1h_refresh": {
+      "provider": "anthropic",
+      "ttl": "1h",
+      "repeats": 5,
+      "steps": [
+        [
+          0,
+          "write",
+          "write"
+        ],
+        [
+          600,
+          "read",
+          "hit"
+        ],
+        [
+          3900,
+          "read",
+          "hit"
+        ]
+      ]
+    },
+    "O_quick": {
+      "provider": "openai",
+      "ttl": "auto",
+      "repeats": 5,
+      "steps": [
+        [
+          0,
+          "write",
+          "write"
+        ],
+        [
+          20,
+          "read",
+          "hit"
+        ],
+        [
+          300,
+          "read",
+          "hit"
+        ]
+      ]
+    },
+    "O_extend": {
+      "provider": "openai",
+      "ttl": "auto",
+      "repeats": 3,
+      "steps": [
+        [
+          0,
+          "write",
+          "write"
+        ],
+        [
+          20,
+          "extend",
+          "extend"
+        ]
+      ]
+    },
+    "O_hit1500": {
+      "provider": "openai",
+      "ttl": "auto",
+      "repeats": 5,
+      "steps": [
+        [
+          0,
+          "write",
+          "write"
+        ],
+        [
+          1500,
+          "read",
+          "hit"
+        ]
+      ]
+    },
+    "O_miss2100": {
+      "provider": "openai",
+      "ttl": "auto",
+      "repeats": 5,
+      "steps": [
+        [
+          0,
+          "write",
+          "write"
+        ],
+        [
+          2100,
+          "read",
+          "miss"
+        ]
+      ]
+    },
+    "O_refresh": {
+      "provider": "openai",
+      "ttl": "auto",
+      "repeats": 5,
+      "steps": [
+        [
+          0,
+          "write",
+          "write"
+        ],
+        [
+          1200,
+          "read",
+          "hit"
+        ],
+        [
+          2700,
+          "read",
+          "hit"
+        ]
+      ]
+    },
+    "O_extend_msg": {
+      "provider": "openai",
+      "ttl": "auto",
+      "repeats": 5,
+      "steps": [
+        [
+          0,
+          "write",
+          "write"
+        ],
+        [
+          20,
+          "extend",
+          "extend"
+        ]
+      ]
+    },
+    "C5_extend_msg": {
+      "provider": "anthropic",
+      "ttl": "5m",
+      "repeats": 3,
+      "steps": [
+        [
+          0,
+          "write",
+          "write"
+        ],
+        [
+          20,
+          "extend",
+          "extend"
+        ]
+      ]
+    }
+  },
+  "counts": {
+    "requests": 16,
+    "valid": 16,
+    "wrong_provider": 0,
+    "non_default_tier": 0,
+    "http_error": 0,
+    "budget_skip": 0,
+    "after_invalid_step": 0,
+    "no_generation": 0
+  },
+  "spend": {
+    "run_usd_from_usage": 0.226136,
+    "run_usd_from_generations": 0.226136,
+    "key_usage_before": 3.58926935,
+    "key_usage_after": 3.888088
+  },
+  "evaluation": {
+    "C5_extend_msg": {
+      "n": 3,
+      "hits": 3,
+      "status": "CONFIRMED",
+      "detail": [
+        {
+          "prefix": 4115,
+          "cached": 4115,
+          "written": 1215,
+          "prompt": 5332
+        },
+        {
+          "prefix": 4116,
+          "cached": 4116,
+          "written": 1215,
+          "prompt": 5333
+        },
+        {
+          "prefix": 4117,
+          "cached": 4117,
+          "written": 1215,
+          "prompt": 5334
+        }
+      ]
+    },
+    "O_extend_msg": {
+      "n": 5,
+      "hits": 5,
+      "status": "CONFIRMED",
+      "detail": [
+        {
+          "prefix": 3425,
+          "cached": 3425,
+          "written": 1018,
+          "prompt": 4446
+        },
+        {
+          "prefix": 3425,
+          "cached": 3425,
+          "written": 1018,
+          "prompt": 4446
+        },
+        {
+          "prefix": 3426,
+          "cached": 3426,
+          "written": 1018,
+          "prompt": 4447
+        },
+        {
+          "prefix": 3426,
+          "cached": 3426,
+          "written": 1018,
+          "prompt": 4447
+        },
+        {
+          "prefix": 3425,
+          "cached": 3425,
+          "written": 1018,
+          "prompt": 4446
+        }
+      ]
+    }
+  },
+  "groups": [
+    "O_extend_msg",
+    "C5_extend_msg"
+  ],
+  "records": [
+    {
+      "group": "C5_extend_msg",
+      "rep": 0,
+      "step": 0,
+      "label": "write",
+      "expect": "write",
+      "provider": "anthropic",
+      "ttl": "5m",
+      "blocks": "X",
+      "planned_offset_s": 0,
+      "max_tokens": 1,
+      "status": 200,
+      "t_send": 12.0,
+      "offset_s": 0.0,
+      "latency_s": 1.36,
+      "gen_id": "gen-1792525485-x7vVETJ7EDcRxVAEvhMl",
+      "resp_provider": "Anthropic",
+      "service_tier": "default",
+      "prompt_tokens": 4118,
+      "completion_tokens": 1,
+      "cached_tokens": 0,
+      "cache_write_tokens": 4116,
+      "cost": 0.02576,
+      "error": null,
+      "generation": {
+        "provider_name": "Anthropic",
+        "native_tokens_prompt": 4118,
+        "native_tokens_cached": 0,
+        "native_tokens_completion": 1,
+        "native_tokens_reasoning": 0,
+        "total_cost": 0.02576,
+        "service_tier": "default",
+        "finish_reason": "length",
+        "native_finish_reason": "max_tokens",
+        "model": "anthropic/claude-4.8-opus-20260528",
+        "cache_discount": -0.005145
+      },
+      "valid": true,
+      "discard_reason": null,
+      "price": {
+        "expected_usd": 0.02576,
+        "billed_usd": 0.02576,
+        "rel_err": 0.0,
+        "measured_write_mult": 1.25
+      }
+    },
+    {
+      "group": "C5_extend_msg",
+      "rep": 0,
+      "step": 1,
+      "label": "extend",
+      "expect": "extend",
+      "provider": "anthropic",
+      "ttl": "5m",
+      "blocks": "X|A|S",
+      "planned_offset_s": 20,
+      "max_tokens": 1,
+      "status": 200,
+      "t_send": 32.0,
+      "offset_s": 20.0,
+      "latency_s": 1.59,
+      "gen_id": "gen-1792525505-tlWn0lxY9EI5xXG0CgJm",
+      "resp_provider": "Anthropic",
+      "service_tier": "default",
+      "prompt_tokens": 5333,
+      "completion_tokens": 1,
+      "cached_tokens": 4116,
+      "cache_write_tokens": 1215,
+      "cost": 0.00968675,
+      "error": null,
+      "generation": {
+        "provider_name": "Anthropic",
+        "native_tokens_prompt": 5333,
+        "native_tokens_cached": 4116,
+        "native_tokens_completion": 1,
+        "native_tokens_reasoning": 0,
+        "total_cost": 0.00968675,
+        "service_tier": "default",
+        "finish_reason": "length",
+        "native_finish_reason": "max_tokens",
+        "model": "anthropic/claude-4.8-opus-20260528",
+        "cache_discount": 0.01700325
+      },
+      "valid": true,
+      "discard_reason": null,
+      "price": {
+        "expected_usd": 0.009686750000000001,
+        "billed_usd": 0.00968675,
+        "rel_err": -1.7908209419844705e-16
+      },
+      "outcome": "hit"
+    },
+    {
+      "group": "C5_extend_msg",
+      "rep": 1,
+      "step": 0,
+      "label": "write",
+      "expect": "write",
+      "provider": "anthropic",
+      "ttl": "5m",
+      "blocks": "X",
+      "planned_offset_s": 0,
+      "max_tokens": 1,
+      "status": 200,
+      "t_send": 10.0,
+      "offset_s": 0.0,
+      "latency_s": 1.27,
+      "gen_id": "gen-1792525483-aOp5emFkrwm16RfhEdaz",
+      "resp_provider": "Anthropic",
+      "service_tier": "default",
+      "prompt_tokens": 4117,
+      "completion_tokens": 1,
+      "cached_tokens": 0,
+      "cache_write_tokens": 4115,
+      "cost": 0.02575375,
+      "error": null,
+      "generation": {
+        "provider_name": "Anthropic",
+        "native_tokens_prompt": 4117,
+        "native_tokens_cached": 0,
+        "native_tokens_completion": 1,
+        "native_tokens_reasoning": 0,
+        "total_cost": 0.02575375,
+        "service_tier": "default",
+        "finish_reason": "length",
+        "native_finish_reason": "max_tokens",
+        "model": "anthropic/claude-4.8-opus-20260528",
+        "cache_discount": -0.00514375
+      },
+      "valid": true,
+      "discard_reason": null,
+      "price": {
+        "expected_usd": 0.02575375,
+        "billed_usd": 0.02575375,
+        "rel_err": 0.0,
+        "measured_write_mult": 1.25
+      }
+    },
+    {
+      "group": "C5_extend_msg",
+      "rep": 1,
+      "step": 1,
+      "label": "extend",
+      "expect": "extend",
+      "provider": "anthropic",
+      "ttl": "5m",
+      "blocks": "X|A|S",
+      "planned_offset_s": 20,
+      "max_tokens": 1,
+      "status": 200,
+      "t_send": 30.0,
+      "offset_s": 20.0,
+      "latency_s": 1.47,
+      "gen_id": "gen-1792525503-XCyLUl6Y5qZa4HsWZ7rM",
+      "resp_provider": "Anthropic",
+      "service_tier": "default",
+      "prompt_tokens": 5332,
+      "completion_tokens": 1,
+      "cached_tokens": 4115,
+      "cache_write_tokens": 1215,
+      "cost": 0.00968625,
+      "error": null,
+      "generation": {
+        "provider_name": "Anthropic",
+        "native_tokens_prompt": 5332,
+        "native_tokens_cached": 4115,
+        "native_tokens_completion": 1,
+        "native_tokens_reasoning": 0,
+        "total_cost": 0.00968625,
+        "service_tier": "default",
+        "finish_reason": "length",
+        "native_finish_reason": "max_tokens",
+        "model": "anthropic/claude-4.8-opus-20260528",
+        "cache_discount": 0.01699875
+      },
+      "valid": true,
+      "discard_reason": null,
+      "price": {
+        "expected_usd": 0.00968625,
+        "billed_usd": 0.00968625,
+        "rel_err": 0.0
+      },
+      "outcome": "hit"
+    },
+    {
+      "group": "C5_extend_msg",
+      "rep": 2,
+      "step": 0,
+      "label": "write",
+      "expect": "write",
+      "provider": "anthropic",
+      "ttl": "5m",
+      "blocks": "X",
+      "planned_offset_s": 0,
+      "max_tokens": 1,
+      "status": 200,
+      "t_send": 14.0,
+      "offset_s": 0.0,
+      "latency_s": 1.19,
+      "gen_id": "gen-1792525487-HzCLEZD3NZgc5SD6tTRJ",
+      "resp_provider": "Anthropic",
+      "service_tier": "default",
+      "prompt_tokens": 4119,
+      "completion_tokens": 1,
+      "cached_tokens": 0,
+      "cache_write_tokens": 4117,
+      "cost": 0.02576625,
+      "error": null,
+      "generation": {
+        "provider_name": "Anthropic",
+        "native_tokens_prompt": 4119,
+        "native_tokens_cached": 0,
+        "native_tokens_completion": 1,
+        "native_tokens_reasoning": 0,
+        "total_cost": 0.02576625,
+        "service_tier": "default",
+        "finish_reason": "length",
+        "native_finish_reason": "max_tokens",
+        "model": "anthropic/claude-4.8-opus-20260528",
+        "cache_discount": -0.00514625
+      },
+      "valid": true,
+      "discard_reason": null,
+      "price": {
+        "expected_usd": 0.02576625,
+        "billed_usd": 0.02576625,
+        "rel_err": 0.0,
+        "measured_write_mult": 1.25
+      }
+    },
+    {
+      "group": "C5_extend_msg",
+      "rep": 2,
+      "step": 1,
+      "label": "extend",
+      "expect": "extend",
+      "provider": "anthropic",
+      "ttl": "5m",
+      "blocks": "X|A|S",
+      "planned_offset_s": 20,
+      "max_tokens": 1,
+      "status": 200,
+      "t_send": 34.0,
+      "offset_s": 20.0,
+      "latency_s": 1.22,
+      "gen_id": "gen-1792525507-orYF2Qq13zrJS7Ks8Zwr",
+      "resp_provider": "Anthropic",
+      "service_tier": "default",
+      "prompt_tokens": 5334,
+      "completion_tokens": 1,
+      "cached_tokens": 4117,
+      "cache_write_tokens": 1215,
+      "cost": 0.00968725,
+      "error": null,
+      "generation": {
+        "provider_name": "Anthropic",
+        "native_tokens_prompt": 5334,
+        "native_tokens_cached": 4117,
+        "native_tokens_completion": 1,
+        "native_tokens_reasoning": 0,
+        "total_cost": 0.00968725,
+        "service_tier": "default",
+        "finish_reason": "length",
+        "native_finish_reason": "max_tokens",
+        "model": "anthropic/claude-4.8-opus-20260528",
+        "cache_discount": 0.01700775
+      },
+      "valid": true,
+      "discard_reason": null,
+      "price": {
+        "expected_usd": 0.009687250000000001,
+        "billed_usd": 0.00968725,
+        "rel_err": -1.790728510131159e-16
+      },
+      "outcome": "hit"
+    },
+    {
+      "group": "O_extend_msg",
+      "rep": 0,
+      "step": 0,
+      "label": "write",
+      "expect": "write",
+      "provider": "openai",
+      "ttl": "auto",
+      "blocks": "X",
+      "planned_offset_s": 0,
+      "max_tokens": 16,
+      "status": 200,
+      "t_send": 2.0,
+      "offset_s": 0.0,
+      "latency_s": 1.07,
+      "gen_id": "gen-1792525475-3jB4jqNeMOjVTBd8kUy8",
+      "resp_provider": "OpenAI",
+      "service_tier": "default",
+      "prompt_tokens": 3428,
+      "completion_tokens": 9,
+      "cached_tokens": 0,
+      "cache_write_tokens": 3425,
+      "cost": 0.017317,
+      "error": null,
+      "generation": {
+        "provider_name": "OpenAI",
+        "native_tokens_prompt": 3428,
+        "native_tokens_cached": 0,
+        "native_tokens_completion": 9,
+        "native_tokens_reasoning": 0,
+        "total_cost": 0.017317,
+        "service_tier": "default",
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "model": "openai/gpt-5.6-sol-20260709",
+        "cache_discount": -0.003425
+      },
+      "valid": true,
+      "discard_reason": null,
+      "price": {
+        "expected_usd": 0.017317000000000003,
+        "billed_usd": 0.017317,
+        "rel_err": -2.0034919165869455e-16,
+        "measured_write_mult": 1.2499999999999998
+      }
+    },
+    {
+      "group": "O_extend_msg",
+      "rep": 0,
+      "step": 1,
+      "label": "extend",
+      "expect": "extend",
+      "provider": "openai",
+      "ttl": "auto",
+      "blocks": "X|A|S",
+      "planned_offset_s": 20,
+      "max_tokens": 16,
+      "status": 200,
+      "t_send": 22.0,
+      "offset_s": 20.0,
+      "latency_s": 1.72,
+      "gen_id": "gen-1792525495-rSK6UgOjPGIzmf6EiQYP",
+      "resp_provider": "OpenAI",
+      "service_tier": "default",
+      "prompt_tokens": 4446,
+      "completion_tokens": 9,
+      "cached_tokens": 3425,
+      "cache_write_tokens": 1018,
+      "cost": 0.006652,
+      "error": null,
+      "generation": {
+        "provider_name": "OpenAI",
+        "native_tokens_prompt": 4446,
+        "native_tokens_cached": 3425,
+        "native_tokens_completion": 9,
+        "native_tokens_reasoning": 0,
+        "total_cost": 0.006652,
+        "service_tier": "default",
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "model": "openai/gpt-5.6-sol-20260709",
+        "cache_discount": 0.011312
+      },
+      "valid": true,
+      "discard_reason": null,
+      "price": {
+        "expected_usd": 0.006652,
+        "billed_usd": 0.006652,
+        "rel_err": 0.0
+      },
+      "outcome": "hit"
+    },
+    {
+      "group": "O_extend_msg",
+      "rep": 1,
+      "step": 0,
+      "label": "write",
+      "expect": "write",
+      "provider": "openai",
+      "ttl": "auto",
+      "blocks": "X",
+      "planned_offset_s": 0,
+      "max_tokens": 16,
+      "status": 200,
+      "t_send": 6.0,
+      "offset_s": 0.0,
+      "latency_s": 1.16,
+      "gen_id": "gen-1792525479-katw1UyhrbAqZYEJJ5r2",
+      "resp_provider": "OpenAI",
+      "service_tier": "default",
+      "prompt_tokens": 3429,
+      "completion_tokens": 9,
+      "cached_tokens": 0,
+      "cache_write_tokens": 3426,
+      "cost": 0.017322,
+      "error": null,
+      "generation": {
+        "provider_name": "OpenAI",
+        "native_tokens_prompt": 3429,
+        "native_tokens_cached": 0,
+        "native_tokens_completion": 9,
+        "native_tokens_reasoning": 0,
+        "total_cost": 0.017322,
+        "service_tier": "default",
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "model": "openai/gpt-5.6-sol-20260709",
+        "cache_discount": -0.003426
+      },
+      "valid": true,
+      "discard_reason": null,
+      "price": {
+        "expected_usd": 0.017322,
+        "billed_usd": 0.017322,
+        "rel_err": 0.0,
+        "measured_write_mult": 1.25
+      }
+    },
+    {
+      "group": "O_extend_msg",
+      "rep": 1,
+      "step": 1,
+      "label": "extend",
+      "expect": "extend",
+      "provider": "openai",
+      "ttl": "auto",
+      "blocks": "X|A|S",
+      "planned_offset_s": 20,
+      "max_tokens": 16,
+      "status": 200,
+      "t_send": 26.0,
+      "offset_s": 20.0,
+      "latency_s": 1.58,
+      "gen_id": "gen-1792525499-BzcJOl7eRQjSvchgibtj",
+      "resp_provider": "OpenAI",
+      "service_tier": "default",
+      "prompt_tokens": 4447,
+      "completion_tokens": 6,
+      "cached_tokens": 3426,
+      "cache_write_tokens": 1018,
+      "cost": 0.0065924,
+      "error": null,
+      "generation": {
+        "provider_name": "OpenAI",
+        "native_tokens_prompt": 4447,
+        "native_tokens_cached": 3426,
+        "native_tokens_completion": 6,
+        "native_tokens_reasoning": 0,
+        "total_cost": 0.0065924,
+        "service_tier": "default",
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "model": "openai/gpt-5.6-sol-20260709",
+        "cache_discount": 0.0113156
+      },
+      "valid": true,
+      "discard_reason": null,
+      "price": {
+        "expected_usd": 0.0065924,
+        "billed_usd": 0.0065924,
+        "rel_err": 0.0
+      },
+      "outcome": "hit"
+    },
+    {
+      "group": "O_extend_msg",
+      "rep": 2,
+      "step": 0,
+      "label": "write",
+      "expect": "write",
+      "provider": "openai",
+      "ttl": "auto",
+      "blocks": "X",
+      "planned_offset_s": 0,
+      "max_tokens": 16,
+      "status": 200,
+      "t_send": 8.0,
+      "offset_s": 0.0,
+      "latency_s": 1.9,
+      "gen_id": "gen-1792525481-LQkbGZ8clAY65byFCHCA",
+      "resp_provider": "OpenAI",
+      "service_tier": "default",
+      "prompt_tokens": 3428,
+      "completion_tokens": 9,
+      "cached_tokens": 0,
+      "cache_write_tokens": 3425,
+      "cost": 0.017317,
+      "error": null,
+      "generation": {
+        "provider_name": "OpenAI",
+        "native_tokens_prompt": 3428,
+        "native_tokens_cached": 0,
+        "native_tokens_completion": 9,
+        "native_tokens_reasoning": 0,
+        "total_cost": 0.017317,
+        "service_tier": "default",
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "model": "openai/gpt-5.6-sol-20260709",
+        "cache_discount": -0.003425
+      },
+      "valid": true,
+      "discard_reason": null,
+      "price": {
+        "expected_usd": 0.017317000000000003,
+        "billed_usd": 0.017317,
+        "rel_err": -2.0034919165869455e-16,
+        "measured_write_mult": 1.2499999999999998
+      }
+    },
+    {
+      "group": "O_extend_msg",
+      "rep": 2,
+      "step": 1,
+      "label": "extend",
+      "expect": "extend",
+      "provider": "openai",
+      "ttl": "auto",
+      "blocks": "X|A|S",
+      "planned_offset_s": 20,
+      "max_tokens": 16,
+      "status": 200,
+      "t_send": 28.0,
+      "offset_s": 20.0,
+      "latency_s": 1.84,
+      "gen_id": "gen-1792525501-r4j33XJ9UKs8a5lXo9iL",
+      "resp_provider": "OpenAI",
+      "service_tier": "default",
+      "prompt_tokens": 4446,
+      "completion_tokens": 9,
+      "cached_tokens": 3425,
+      "cache_write_tokens": 1018,
+      "cost": 0.006652,
+      "error": null,
+      "generation": {
+        "provider_name": "OpenAI",
+        "native_tokens_prompt": 4446,
+        "native_tokens_cached": 3425,
+        "native_tokens_completion": 9,
+        "native_tokens_reasoning": 0,
+        "total_cost": 0.006652,
+        "service_tier": "default",
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "model": "openai/gpt-5.6-sol-20260709",
+        "cache_discount": 0.011312
+      },
+      "valid": true,
+      "discard_reason": null,
+      "price": {
+        "expected_usd": 0.006652,
+        "billed_usd": 0.006652,
+        "rel_err": 0.0
+      },
+      "outcome": "hit"
+    },
+    {
+      "group": "O_extend_msg",
+      "rep": 3,
+      "step": 0,
+      "label": "write",
+      "expect": "write",
+      "provider": "openai",
+      "ttl": "auto",
+      "blocks": "X",
+      "planned_offset_s": 0,
+      "max_tokens": 16,
+      "status": 200,
+      "t_send": 4.0,
+      "offset_s": 0.0,
+      "latency_s": 1.29,
+      "gen_id": "gen-1792525476-QtNYrRbsmwJbBsZBWtVR",
+      "resp_provider": "OpenAI",
+      "service_tier": "default",
+      "prompt_tokens": 3429,
+      "completion_tokens": 9,
+      "cached_tokens": 0,
+      "cache_write_tokens": 3426,
+      "cost": 0.017322,
+      "error": null,
+      "generation": {
+        "provider_name": "OpenAI",
+        "native_tokens_prompt": 3429,
+        "native_tokens_cached": 0,
+        "native_tokens_completion": 9,
+        "native_tokens_reasoning": 0,
+        "total_cost": 0.017322,
+        "service_tier": "default",
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "model": "openai/gpt-5.6-sol-20260709",
+        "cache_discount": -0.003426
+      },
+      "valid": true,
+      "discard_reason": null,
+      "price": {
+        "expected_usd": 0.017322,
+        "billed_usd": 0.017322,
+        "rel_err": 0.0,
+        "measured_write_mult": 1.25
+      }
+    },
+    {
+      "group": "O_extend_msg",
+      "rep": 3,
+      "step": 1,
+      "label": "extend",
+      "expect": "extend",
+      "provider": "openai",
+      "ttl": "auto",
+      "blocks": "X|A|S",
+      "planned_offset_s": 20,
+      "max_tokens": 16,
+      "status": 200,
+      "t_send": 24.0,
+      "offset_s": 20.0,
+      "latency_s": 2.37,
+      "gen_id": "gen-1792525497-fR0O8vlurzKcCodNGt3p",
+      "resp_provider": "OpenAI",
+      "service_tier": "default",
+      "prompt_tokens": 4447,
+      "completion_tokens": 9,
+      "cached_tokens": 3426,
+      "cache_write_tokens": 1018,
+      "cost": 0.0066524,
+      "error": null,
+      "generation": {
+        "provider_name": "OpenAI",
+        "native_tokens_prompt": 4447,
+        "native_tokens_cached": 3426,
+        "native_tokens_completion": 9,
+        "native_tokens_reasoning": 0,
+        "total_cost": 0.0066524,
+        "service_tier": "default",
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "model": "openai/gpt-5.6-sol-20260709",
+        "cache_discount": 0.0113156
+      },
+      "valid": true,
+      "discard_reason": null,
+      "price": {
+        "expected_usd": 0.006652399999999999,
+        "billed_usd": 0.0066524,
+        "rel_err": 1.3038328091942812e-16
+      },
+      "outcome": "hit"
+    },
+    {
+      "group": "O_extend_msg",
+      "rep": 4,
+      "step": 0,
+      "label": "write",
+      "expect": "write",
+      "provider": "openai",
+      "ttl": "auto",
+      "blocks": "X",
+      "planned_offset_s": 0,
+      "max_tokens": 16,
+      "status": 200,
+      "t_send": 0.0,
+      "offset_s": 0.0,
+      "latency_s": 1.17,
+      "gen_id": "gen-1792525473-m9MiIqH2ZUyVgt74yGxN",
+      "resp_provider": "OpenAI",
+      "service_tier": "default",
+      "prompt_tokens": 3428,
+      "completion_tokens": 9,
+      "cached_tokens": 0,
+      "cache_write_tokens": 3425,
+      "cost": 0.017317,
+      "error": null,
+      "generation": {
+        "provider_name": "OpenAI",
+        "native_tokens_prompt": 3428,
+        "native_tokens_cached": 0,
+        "native_tokens_completion": 9,
+        "native_tokens_reasoning": 0,
+        "total_cost": 0.017317,
+        "service_tier": "default",
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "model": "openai/gpt-5.6-sol-20260709",
+        "cache_discount": -0.003425
+      },
+      "valid": true,
+      "discard_reason": null,
+      "price": {
+        "expected_usd": 0.017317000000000003,
+        "billed_usd": 0.017317,
+        "rel_err": -2.0034919165869455e-16,
+        "measured_write_mult": 1.2499999999999998
+      }
+    },
+    {
+      "group": "O_extend_msg",
+      "rep": 4,
+      "step": 1,
+      "label": "extend",
+      "expect": "extend",
+      "provider": "openai",
+      "ttl": "auto",
+      "blocks": "X|A|S",
+      "planned_offset_s": 20,
+      "max_tokens": 16,
+      "status": 200,
+      "t_send": 20.0,
+      "offset_s": 20.0,
+      "latency_s": 1.1,
+      "gen_id": "gen-1792525493-eMA8SGqN7q91tMEFKLEg",
+      "resp_provider": "OpenAI",
+      "service_tier": "default",
+      "prompt_tokens": 4446,
+      "completion_tokens": 9,
+      "cached_tokens": 3425,
+      "cache_write_tokens": 1018,
+      "cost": 0.006652,
+      "error": null,
+      "generation": {
+        "provider_name": "OpenAI",
+        "native_tokens_prompt": 4446,
+        "native_tokens_cached": 3425,
+        "native_tokens_completion": 9,
+        "native_tokens_reasoning": 0,
+        "total_cost": 0.006652,
+        "service_tier": "default",
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "model": "openai/gpt-5.6-sol-20260709",
+        "cache_discount": 0.011312
+      },
+      "valid": true,
+      "discard_reason": null,
+      "price": {
+        "expected_usd": 0.006652,
+        "billed_usd": 0.006652,
+        "rel_err": 0.0
+      },
+      "outcome": "hit"
+    }
+  ]
+}

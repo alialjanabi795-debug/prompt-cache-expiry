@@ -1,0 +1,2328 @@
+{
+ "args": {
+  "tag": "B2_verytight_noswap",
+  "cgroup": "dev",
+  "limit_gib": 7.367,
+  "swap_gib": 0.0,
+  "alloc_mb": 1200,
+  "hold_s": 30.0,
+  "prompt_file": "results/calib/last_prompt_ctx16k.txt",
+  "no_pytest": false
+ },
+ "samples": [
+  {
+   "t": 0.0,
+   "cache": 5103443968,
+   "rss": 2562342912,
+   "mapped_file": 5102239744,
+   "swap": 0,
+   "pgmajfault": 28817680,
+   "usage": 7695433728,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 7667486720,
+    "RssAnon": 2562342912,
+    "RssFile": 5105143808,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 0.51,
+   "cache": 5107326976,
+   "rss": 2772930560,
+   "mapped_file": 5102600192,
+   "swap": 0,
+   "pgmajfault": 28817685,
+   "usage": 7910252544,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 7667486720,
+    "RssAnon": 2562342912,
+    "RssFile": 5105143808,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 1.02,
+   "cache": 4725682176,
+   "rss": 3153833984,
+   "mapped_file": 4724924416,
+   "swap": 0,
+   "pgmajfault": 28817685,
+   "usage": 7910170624,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 7280898048,
+    "RssAnon": 2562342912,
+    "RssFile": 4718555136,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 1.52,
+   "cache": 4032811008,
+   "rss": 3845296128,
+   "mapped_file": 4032053248,
+   "swap": 0,
+   "pgmajfault": 28817685,
+   "usage": 7910191104,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 6596939776,
+    "RssAnon": 2562342912,
+    "RssFile": 4034596864,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 2.03,
+   "cache": 4032811008,
+   "rss": 3845296128,
+   "mapped_file": 4032053248,
+   "swap": 0,
+   "pgmajfault": 28817685,
+   "usage": 7910191104,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 6596939776,
+    "RssAnon": 2562342912,
+    "RssFile": 4034596864,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 2.54,
+   "cache": 4032811008,
+   "rss": 3845296128,
+   "mapped_file": 4032053248,
+   "swap": 0,
+   "pgmajfault": 28817685,
+   "usage": 7910191104,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 6596939776,
+    "RssAnon": 2562342912,
+    "RssFile": 4034596864,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 3.04,
+   "cache": 4032811008,
+   "rss": 3845296128,
+   "mapped_file": 4032053248,
+   "swap": 0,
+   "pgmajfault": 28817685,
+   "usage": 7910191104,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 6596939776,
+    "RssAnon": 2562342912,
+    "RssFile": 4034596864,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 3.55,
+   "cache": 4032811008,
+   "rss": 3845296128,
+   "mapped_file": 4032053248,
+   "swap": 0,
+   "pgmajfault": 28817685,
+   "usage": 7910191104,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 6596939776,
+    "RssAnon": 2562342912,
+    "RssFile": 4034596864,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 4.06,
+   "cache": 4032811008,
+   "rss": 3845296128,
+   "mapped_file": 4032053248,
+   "swap": 0,
+   "pgmajfault": 28817685,
+   "usage": 7910191104,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 6596939776,
+    "RssAnon": 2562342912,
+    "RssFile": 4034596864,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 4.57,
+   "cache": 4032811008,
+   "rss": 3845296128,
+   "mapped_file": 4032053248,
+   "swap": 0,
+   "pgmajfault": 28817685,
+   "usage": 7910191104,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 6596939776,
+    "RssAnon": 2562342912,
+    "RssFile": 4034596864,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 5.08,
+   "cache": 4032827392,
+   "rss": 3845296128,
+   "mapped_file": 4031737856,
+   "swap": 0,
+   "pgmajfault": 28817690,
+   "usage": 7910133760,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 6596554752,
+    "RssAnon": 2562342912,
+    "RssFile": 4034211840,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 5.59,
+   "cache": 4032712704,
+   "rss": 3845296128,
+   "mapped_file": 4031492096,
+   "swap": 0,
+   "pgmajfault": 28834505,
+   "usage": 7910178816,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 6596476928,
+    "RssAnon": 2562342912,
+    "RssFile": 4034134016,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 6.1,
+   "cache": 4032933888,
+   "rss": 3845296128,
+   "mapped_file": 4031713280,
+   "swap": 0,
+   "pgmajfault": 28856871,
+   "usage": 7910010880,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 6596444160,
+    "RssAnon": 2562342912,
+    "RssFile": 4034101248,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 6.6,
+   "cache": 4032999424,
+   "rss": 3845296128,
+   "mapped_file": 4031770624,
+   "swap": 0,
+   "pgmajfault": 28881280,
+   "usage": 7910146048,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 6596640768,
+    "RssAnon": 2562342912,
+    "RssFile": 4034297856,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 7.11,
+   "cache": 4033093632,
+   "rss": 3845296128,
+   "mapped_file": 4031873024,
+   "swap": 0,
+   "pgmajfault": 28906989,
+   "usage": 7910252544,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 6596603904,
+    "RssAnon": 2562342912,
+    "RssFile": 4034260992,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 7.66,
+   "cache": 4032921600,
+   "rss": 3845296128,
+   "mapped_file": 4031717376,
+   "swap": 0,
+   "pgmajfault": 28933395,
+   "usage": 7910232064,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 6596558848,
+    "RssAnon": 2562342912,
+    "RssFile": 4034215936,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 8.17,
+   "cache": 4033073152,
+   "rss": 3845296128,
+   "mapped_file": 4031852544,
+   "swap": 0,
+   "pgmajfault": 28958073,
+   "usage": 7910252544,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 6596743168,
+    "RssAnon": 2562342912,
+    "RssFile": 4034400256,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 8.7,
+   "cache": 4033269760,
+   "rss": 3845296128,
+   "mapped_file": 4032053248,
+   "swap": 0,
+   "pgmajfault": 28982096,
+   "usage": 7909998592,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 6596644864,
+    "RssAnon": 2562342912,
+    "RssFile": 4034301952,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 9.2,
+   "cache": 4032864256,
+   "rss": 3845296128,
+   "mapped_file": 4031651840,
+   "swap": 0,
+   "pgmajfault": 29005172,
+   "usage": 7910023168,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 6596685824,
+    "RssAnon": 2562342912,
+    "RssFile": 4034342912,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 9.71,
+   "cache": 4033245184,
+   "rss": 3845296128,
+   "mapped_file": 4032237568,
+   "swap": 0,
+   "pgmajfault": 29026064,
+   "usage": 7910248448,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 6596964352,
+    "RssAnon": 2562342912,
+    "RssFile": 4034621440,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 10.22,
+   "cache": 4032929792,
+   "rss": 3845296128,
+   "mapped_file": 4031926272,
+   "swap": 0,
+   "pgmajfault": 29048328,
+   "usage": 7910240256,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 6596931584,
+    "RssAnon": 2562342912,
+    "RssFile": 4034588672,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 10.72,
+   "cache": 4033077248,
+   "rss": 3845296128,
+   "mapped_file": 4032069632,
+   "swap": 0,
+   "pgmajfault": 29071426,
+   "usage": 7910113280,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 6597120000,
+    "RssAnon": 2562342912,
+    "RssFile": 4034777088,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 11.24,
+   "cache": 4032851968,
+   "rss": 3845296128,
+   "mapped_file": 4031848448,
+   "swap": 0,
+   "pgmajfault": 29093023,
+   "usage": 7910137856,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 6597120000,
+    "RssAnon": 2562342912,
+    "RssFile": 4034777088,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 11.8,
+   "cache": 4032557056,
+   "rss": 3845296128,
+   "mapped_file": 4031557632,
+   "swap": 0,
+   "pgmajfault": 29116754,
+   "usage": 7910002688,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 6597025792,
+    "RssAnon": 2562342912,
+    "RssFile": 4034682880,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 12.31,
+   "cache": 4033163264,
+   "rss": 3845296128,
+   "mapped_file": 4032155648,
+   "swap": 0,
+   "pgmajfault": 29138848,
+   "usage": 7910252544,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 6597021696,
+    "RssAnon": 2562342912,
+    "RssFile": 4034678784,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 12.81,
+   "cache": 4032757760,
+   "rss": 3845296128,
+   "mapped_file": 4031758336,
+   "swap": 0,
+   "pgmajfault": 29161543,
+   "usage": 7910211584,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 6596804608,
+    "RssAnon": 2562342912,
+    "RssFile": 4034461696,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 13.33,
+   "cache": 4032831488,
+   "rss": 3845296128,
+   "mapped_file": 4031823872,
+   "swap": 0,
+   "pgmajfault": 29181183,
+   "usage": 7910240256,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 6596726784,
+    "RssAnon": 2562342912,
+    "RssFile": 4034383872,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 13.84,
+   "cache": 4032937984,
+   "rss": 3845296128,
+   "mapped_file": 4031938560,
+   "swap": 0,
+   "pgmajfault": 29202467,
+   "usage": 7910064128,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 6596972544,
+    "RssAnon": 2562342912,
+    "RssFile": 4034629632,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 14.34,
+   "cache": 4032536576,
+   "rss": 3845296128,
+   "mapped_file": 4031533056,
+   "swap": 0,
+   "pgmajfault": 29226347,
+   "usage": 7910047744,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 6597103616,
+    "RssAnon": 2562342912,
+    "RssFile": 4034760704,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 14.89,
+   "cache": 4032860160,
+   "rss": 3845296128,
+   "mapped_file": 4031852544,
+   "swap": 0,
+   "pgmajfault": 29251364,
+   "usage": 7910092800,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 6596866048,
+    "RssAnon": 2562342912,
+    "RssFile": 4034523136,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 15.4,
+   "cache": 4032643072,
+   "rss": 3845296128,
+   "mapped_file": 4031635456,
+   "swap": 0,
+   "pgmajfault": 29274354,
+   "usage": 7910182912,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 6596943872,
+    "RssAnon": 2562342912,
+    "RssFile": 4034600960,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 15.91,
+   "cache": 4032806912,
+   "rss": 3845296128,
+   "mapped_file": 4031803392,
+   "swap": 0,
+   "pgmajfault": 29297630,
+   "usage": 7910170624,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 6596984832,
+    "RssAnon": 2562342912,
+    "RssFile": 4034641920,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 16.42,
+   "cache": 4032761856,
+   "rss": 3845296128,
+   "mapped_file": 4031758336,
+   "swap": 0,
+   "pgmajfault": 29319197,
+   "usage": 7910146048,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 6597009408,
+    "RssAnon": 2562342912,
+    "RssFile": 4034666496,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 16.93,
+   "cache": 4032753664,
+   "rss": 3845296128,
+   "mapped_file": 4031750144,
+   "swap": 0,
+   "pgmajfault": 29342179,
+   "usage": 7910154240,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 6596902912,
+    "RssAnon": 2562342912,
+    "RssFile": 4034560000,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 17.44,
+   "cache": 4032843776,
+   "rss": 3845296128,
+   "mapped_file": 4031836160,
+   "swap": 0,
+   "pgmajfault": 29366843,
+   "usage": 7910166528,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 6596919296,
+    "RssAnon": 2562342912,
+    "RssFile": 4034576384,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 17.94,
+   "cache": 4032978944,
+   "rss": 3845296128,
+   "mapped_file": 4031975424,
+   "swap": 0,
+   "pgmajfault": 29391104,
+   "usage": 7910248448,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 6596898816,
+    "RssAnon": 2562342912,
+    "RssFile": 4034555904,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 18.45,
+   "cache": 4032925696,
+   "rss": 3845296128,
+   "mapped_file": 4031918080,
+   "swap": 0,
+   "pgmajfault": 29415421,
+   "usage": 7910100992,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 6596812800,
+    "RssAnon": 2562342912,
+    "RssFile": 4034469888,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 18.96,
+   "cache": 4032602112,
+   "rss": 3845296128,
+   "mapped_file": 4031606784,
+   "swap": 0,
+   "pgmajfault": 29441750,
+   "usage": 7910174720,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 6596792320,
+    "RssAnon": 2562342912,
+    "RssFile": 4034449408,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 19.47,
+   "cache": 4033015808,
+   "rss": 3845296128,
+   "mapped_file": 4032012288,
+   "swap": 0,
+   "pgmajfault": 29461918,
+   "usage": 7909867520,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 6596628480,
+    "RssAnon": 2562342912,
+    "RssFile": 4034285568,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 19.98,
+   "cache": 4032942080,
+   "rss": 3845296128,
+   "mapped_file": 4031938560,
+   "swap": 0,
+   "pgmajfault": 29485047,
+   "usage": 7910240256,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 6596964352,
+    "RssAnon": 2562342912,
+    "RssFile": 4034621440,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 20.49,
+   "cache": 4032765952,
+   "rss": 3845296128,
+   "mapped_file": 4031762432,
+   "swap": 0,
+   "pgmajfault": 29509813,
+   "usage": 7910158336,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 6596845568,
+    "RssAnon": 2562342912,
+    "RssFile": 4034502656,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 21.02,
+   "cache": 4032602112,
+   "rss": 3845296128,
+   "mapped_file": 4031598592,
+   "swap": 0,
+   "pgmajfault": 29534868,
+   "usage": 7910150144,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 6596816896,
+    "RssAnon": 2562342912,
+    "RssFile": 4034473984,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 21.53,
+   "cache": 4033060864,
+   "rss": 3845296128,
+   "mapped_file": 4032057344,
+   "swap": 0,
+   "pgmajfault": 29559433,
+   "usage": 7909994496,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 6596812800,
+    "RssAnon": 2562342912,
+    "RssFile": 4034469888,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 22.04,
+   "cache": 4032905216,
+   "rss": 3845296128,
+   "mapped_file": 4031897600,
+   "swap": 0,
+   "pgmajfault": 29580045,
+   "usage": 7910076416,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 6596833280,
+    "RssAnon": 2562342912,
+    "RssFile": 4034490368,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 22.54,
+   "cache": 4032581632,
+   "rss": 3845296128,
+   "mapped_file": 4031590400,
+   "swap": 0,
+   "pgmajfault": 29602352,
+   "usage": 7910035456,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 6596980736,
+    "RssAnon": 2562342912,
+    "RssFile": 4034637824,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 23.05,
+   "cache": 4032589824,
+   "rss": 3845296128,
+   "mapped_file": 4031586304,
+   "swap": 0,
+   "pgmajfault": 29627793,
+   "usage": 7910047744,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 6596964352,
+    "RssAnon": 2562342912,
+    "RssFile": 4034621440,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 23.57,
+   "cache": 4032856064,
+   "rss": 3845296128,
+   "mapped_file": 4031848448,
+   "swap": 0,
+   "pgmajfault": 29653431,
+   "usage": 7910178816,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 6596759552,
+    "RssAnon": 2562342912,
+    "RssFile": 4034416640,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 24.08,
+   "cache": 4033089536,
+   "rss": 3845296128,
+   "mapped_file": 4032086016,
+   "swap": 0,
+   "pgmajfault": 29680660,
+   "usage": 7910223872,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 6596661248,
+    "RssAnon": 2562342912,
+    "RssFile": 4034318336,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 24.59,
+   "cache": 4032765952,
+   "rss": 3845296128,
+   "mapped_file": 4031770624,
+   "swap": 0,
+   "pgmajfault": 29703826,
+   "usage": 7910010880,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 6596997120,
+    "RssAnon": 2562342912,
+    "RssFile": 4034654208,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 25.11,
+   "cache": 4032565248,
+   "rss": 3845296128,
+   "mapped_file": 4031561728,
+   "swap": 0,
+   "pgmajfault": 29727554,
+   "usage": 7910252544,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 6597001216,
+    "RssAnon": 2562342912,
+    "RssFile": 4034658304,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 25.63,
+   "cache": 4032983040,
+   "rss": 3845296128,
+   "mapped_file": 4031979520,
+   "swap": 0,
+   "pgmajfault": 29753193,
+   "usage": 7910244352,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 6596886528,
+    "RssAnon": 2562342912,
+    "RssFile": 4034543616,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 26.14,
+   "cache": 4033101824,
+   "rss": 3845296128,
+   "mapped_file": 4032094208,
+   "swap": 0,
+   "pgmajfault": 29776590,
+   "usage": 7910039552,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 6596960256,
+    "RssAnon": 2562342912,
+    "RssFile": 4034617344,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 26.66,
+   "cache": 4032671744,
+   "rss": 3845296128,
+   "mapped_file": 4031668224,
+   "swap": 0,
+   "pgmajfault": 29797993,
+   "usage": 7910035456,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 6596841472,
+    "RssAnon": 2562342912,
+    "RssFile": 4034498560,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 27.17,
+   "cache": 4032815104,
+   "rss": 3845296128,
+   "mapped_file": 4032790528,
+   "swap": 0,
+   "pgmajfault": 29821042,
+   "usage": 7910137856,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 6597955584,
+    "RssAnon": 2562342912,
+    "RssFile": 4035612672,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 27.68,
+   "cache": 4032663552,
+   "rss": 3845296128,
+   "mapped_file": 4032643072,
+   "swap": 0,
+   "pgmajfault": 29843954,
+   "usage": 7910027264,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 6597926912,
+    "RssAnon": 2562342912,
+    "RssFile": 4035584000,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 28.19,
+   "cache": 4033146880,
+   "rss": 3845296128,
+   "mapped_file": 4033122304,
+   "swap": 0,
+   "pgmajfault": 29869799,
+   "usage": 7909990400,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 6598160384,
+    "RssAnon": 2562342912,
+    "RssFile": 4035817472,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 28.7,
+   "cache": 4033048576,
+   "rss": 3845296128,
+   "mapped_file": 4032409600,
+   "swap": 0,
+   "pgmajfault": 29882357,
+   "usage": 7910252544,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 6597558272,
+    "RssAnon": 2562342912,
+    "RssFile": 4035215360,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 29.2,
+   "cache": 4032884736,
+   "rss": 3845296128,
+   "mapped_file": 4032208896,
+   "swap": 0,
+   "pgmajfault": 29884459,
+   "usage": 7910146048,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 6597300224,
+    "RssAnon": 2562342912,
+    "RssFile": 4034957312,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 29.71,
+   "cache": 4032618496,
+   "rss": 3845296128,
+   "mapped_file": 4030550016,
+   "swap": 0,
+   "pgmajfault": 29899277,
+   "usage": 7910023168,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 6596104192,
+    "RssAnon": 2562342912,
+    "RssFile": 4033761280,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 30.22,
+   "cache": 4032987136,
+   "rss": 3845296128,
+   "mapped_file": 4031434752,
+   "swap": 0,
+   "pgmajfault": 29919603,
+   "usage": 7910178816,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 6596243456,
+    "RssAnon": 2562342912,
+    "RssFile": 4033900544,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 30.74,
+   "cache": 4032872448,
+   "rss": 3845296128,
+   "mapped_file": 4032524288,
+   "swap": 0,
+   "pgmajfault": 29945683,
+   "usage": 7910113280,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 6597758976,
+    "RssAnon": 2562342912,
+    "RssFile": 4035416064,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 31.25,
+   "cache": 4032942080,
+   "rss": 3845296128,
+   "mapped_file": 4032610304,
+   "swap": 0,
+   "pgmajfault": 29974643,
+   "usage": 7910240256,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 6597668864,
+    "RssAnon": 2562342912,
+    "RssFile": 4035325952,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 31.76,
+   "cache": 4063133696,
+   "rss": 2966159360,
+   "mapped_file": 4062785536,
+   "swap": 0,
+   "pgmajfault": 29997999,
+   "usage": 7068721152,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 6629167104,
+    "RssAnon": 2562342912,
+    "RssFile": 4066824192,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 32.27,
+   "cache": 4168224768,
+   "rss": 2562342912,
+   "mapped_file": 4167675904,
+   "swap": 0,
+   "pgmajfault": 30023656,
+   "usage": 6760054784,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 6734491648,
+    "RssAnon": 2562342912,
+    "RssFile": 4172148736,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 32.78,
+   "cache": 4285644800,
+   "rss": 2562342912,
+   "mapped_file": 4285095936,
+   "swap": 0,
+   "pgmajfault": 30052324,
+   "usage": 6877491200,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 6857723904,
+    "RssAnon": 2562342912,
+    "RssFile": 4295380992,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 33.31,
+   "cache": 4407779328,
+   "rss": 2562342912,
+   "mapped_file": 4407230464,
+   "swap": 0,
+   "pgmajfault": 30082142,
+   "usage": 6999912448,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 6973923328,
+    "RssAnon": 2562342912,
+    "RssFile": 4411580416,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 33.82,
+   "cache": 4513570816,
+   "rss": 2562342912,
+   "mapped_file": 4513021952,
+   "swap": 0,
+   "pgmajfault": 30107970,
+   "usage": 7105556480,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 7079530496,
+    "RssAnon": 2562342912,
+    "RssFile": 4517187584,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 34.32,
+   "cache": 4623949824,
+   "rss": 2562342912,
+   "mapped_file": 4623400960,
+   "swap": 0,
+   "pgmajfault": 30134918,
+   "usage": 7216181248,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 7190224896,
+    "RssAnon": 2562342912,
+    "RssFile": 4627881984,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 34.83,
+   "cache": 4713709568,
+   "rss": 2562342912,
+   "mapped_file": 4713177088,
+   "swap": 0,
+   "pgmajfault": 30156832,
+   "usage": 7305834496,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 7278432256,
+    "RssAnon": 2562342912,
+    "RssFile": 4716089344,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 35.34,
+   "cache": 5032996864,
+   "rss": 2562342912,
+   "mapped_file": 5032099840,
+   "swap": 0,
+   "pgmajfault": 30158278,
+   "usage": 7625420800,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 7604121600,
+    "RssAnon": 2562342912,
+    "RssFile": 5041778688,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 35.85,
+   "cache": 5101133824,
+   "rss": 2562342912,
+   "mapped_file": 5100601344,
+   "swap": 0,
+   "pgmajfault": 30158578,
+   "usage": 7693131776,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 7665856512,
+    "RssAnon": 2562342912,
+    "RssFile": 5103513600,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 36.36,
+   "cache": 5101494272,
+   "rss": 2562342912,
+   "mapped_file": 5100695552,
+   "swap": 0,
+   "pgmajfault": 30158580,
+   "usage": 7693389824,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 7665950720,
+    "RssAnon": 2562342912,
+    "RssFile": 5103607808,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 36.87,
+   "cache": 5101494272,
+   "rss": 2562342912,
+   "mapped_file": 5100695552,
+   "swap": 0,
+   "pgmajfault": 30158580,
+   "usage": 7693651968,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 7666020352,
+    "RssAnon": 2562342912,
+    "RssFile": 5103677440,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 37.38,
+   "cache": 5101756416,
+   "rss": 2562342912,
+   "mapped_file": 5100765184,
+   "swap": 0,
+   "pgmajfault": 30158581,
+   "usage": 7693910016,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 7666085888,
+    "RssAnon": 2562342912,
+    "RssFile": 5103742976,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 37.89,
+   "cache": 5102116864,
+   "rss": 2562342912,
+   "mapped_file": 5100892160,
+   "swap": 0,
+   "pgmajfault": 30158583,
+   "usage": 7693905920,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 7666147328,
+    "RssAnon": 2562342912,
+    "RssFile": 5103804416,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 38.4,
+   "cache": 5102116864,
+   "rss": 2562342912,
+   "mapped_file": 5100892160,
+   "swap": 0,
+   "pgmajfault": 30158583,
+   "usage": 7693905920,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 7666147328,
+    "RssAnon": 2562342912,
+    "RssFile": 5103804416,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 38.91,
+   "cache": 5102116864,
+   "rss": 2562342912,
+   "mapped_file": 5100892160,
+   "swap": 0,
+   "pgmajfault": 30158583,
+   "usage": 7694168064,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 7666212864,
+    "RssAnon": 2562342912,
+    "RssFile": 5103869952,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 39.42,
+   "cache": 5102641152,
+   "rss": 2562342912,
+   "mapped_file": 5101023232,
+   "swap": 0,
+   "pgmajfault": 30158585,
+   "usage": 7694954496,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 7666343936,
+    "RssAnon": 2562342912,
+    "RssFile": 5104001024,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 39.92,
+   "cache": 5103165440,
+   "rss": 2562342912,
+   "mapped_file": 5101154304,
+   "swap": 0,
+   "pgmajfault": 30158587,
+   "usage": 7695216640,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 7666409472,
+    "RssAnon": 2562342912,
+    "RssFile": 5104066560,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 40.43,
+   "cache": 5103165440,
+   "rss": 2562342912,
+   "mapped_file": 5101154304,
+   "swap": 0,
+   "pgmajfault": 30158587,
+   "usage": 7695478784,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 7666475008,
+    "RssAnon": 2562342912,
+    "RssFile": 5104132096,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 40.94,
+   "cache": 5103165440,
+   "rss": 2562342912,
+   "mapped_file": 5101154304,
+   "swap": 0,
+   "pgmajfault": 30158587,
+   "usage": 7695478784,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 7666475008,
+    "RssAnon": 2562342912,
+    "RssFile": 5104132096,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 41.45,
+   "cache": 5103689728,
+   "rss": 2562342912,
+   "mapped_file": 5101285376,
+   "swap": 0,
+   "pgmajfault": 30158589,
+   "usage": 7695740928,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 7666540544,
+    "RssAnon": 2562342912,
+    "RssFile": 5104197632,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 41.96,
+   "cache": 5104922624,
+   "rss": 2562342912,
+   "mapped_file": 5102080000,
+   "swap": 0,
+   "pgmajfault": 30158611,
+   "usage": 7696969728,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 7667335168,
+    "RssAnon": 2562342912,
+    "RssFile": 5104992256,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 42.47,
+   "cache": 5104922624,
+   "rss": 2562342912,
+   "mapped_file": 5102080000,
+   "swap": 0,
+   "pgmajfault": 30158611,
+   "usage": 7696969728,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 7667335168,
+    "RssAnon": 2562342912,
+    "RssFile": 5104992256,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 42.97,
+   "cache": 5104922624,
+   "rss": 2562342912,
+   "mapped_file": 5102080000,
+   "swap": 0,
+   "pgmajfault": 30158611,
+   "usage": 7696969728,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 7667335168,
+    "RssAnon": 2562342912,
+    "RssFile": 5104992256,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 43.48,
+   "cache": 5105147904,
+   "rss": 2562342912,
+   "mapped_file": 5102338048,
+   "swap": 0,
+   "pgmajfault": 30158618,
+   "usage": 7697207296,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 7667888128,
+    "RssAnon": 2562342912,
+    "RssFile": 5105545216,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 43.99,
+   "cache": 5106544640,
+   "rss": 2562347008,
+   "mapped_file": 5103169536,
+   "swap": 0,
+   "pgmajfault": 30158643,
+   "usage": 7698681856,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 7668428800,
+    "RssAnon": 2562347008,
+    "RssFile": 5106081792,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 44.5,
+   "cache": 5106544640,
+   "rss": 2562347008,
+   "mapped_file": 5103169536,
+   "swap": 0,
+   "pgmajfault": 30158643,
+   "usage": 7698681856,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 7668428800,
+    "RssAnon": 2562347008,
+    "RssFile": 5106081792,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 45.01,
+   "cache": 5106544640,
+   "rss": 2562347008,
+   "mapped_file": 5103169536,
+   "swap": 0,
+   "pgmajfault": 30158643,
+   "usage": 7698681856,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 7668428800,
+    "RssAnon": 2562347008,
+    "RssFile": 5106081792,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 45.52,
+   "cache": 5106544640,
+   "rss": 2562347008,
+   "mapped_file": 5103169536,
+   "swap": 0,
+   "pgmajfault": 30158643,
+   "usage": 7698681856,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 7668428800,
+    "RssAnon": 2562347008,
+    "RssFile": 5106081792,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 46.03,
+   "cache": 5106544640,
+   "rss": 2562347008,
+   "mapped_file": 5103169536,
+   "swap": 0,
+   "pgmajfault": 30158643,
+   "usage": 7698681856,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 7668428800,
+    "RssAnon": 2562347008,
+    "RssFile": 5106081792,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 46.54,
+   "cache": 5106544640,
+   "rss": 2562347008,
+   "mapped_file": 5103169536,
+   "swap": 0,
+   "pgmajfault": 30158643,
+   "usage": 7698681856,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 7668428800,
+    "RssAnon": 2562347008,
+    "RssFile": 5106081792,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 47.04,
+   "cache": 5106544640,
+   "rss": 2562347008,
+   "mapped_file": 5103169536,
+   "swap": 0,
+   "pgmajfault": 30158643,
+   "usage": 7698681856,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 7668428800,
+    "RssAnon": 2562347008,
+    "RssFile": 5106081792,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 47.56,
+   "cache": 5106544640,
+   "rss": 2562347008,
+   "mapped_file": 5103169536,
+   "swap": 0,
+   "pgmajfault": 30158643,
+   "usage": 7698681856,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 7668428800,
+    "RssAnon": 2562347008,
+    "RssFile": 5106081792,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 48.07,
+   "cache": 5106544640,
+   "rss": 2562347008,
+   "mapped_file": 5103169536,
+   "swap": 0,
+   "pgmajfault": 30158643,
+   "usage": 7698681856,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 7668428800,
+    "RssAnon": 2562347008,
+    "RssFile": 5106081792,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 48.57,
+   "cache": 5106544640,
+   "rss": 2562347008,
+   "mapped_file": 5103169536,
+   "swap": 0,
+   "pgmajfault": 30158643,
+   "usage": 7698681856,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 7668428800,
+    "RssAnon": 2562347008,
+    "RssFile": 5106081792,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 49.08,
+   "cache": 5106544640,
+   "rss": 2562347008,
+   "mapped_file": 5103169536,
+   "swap": 0,
+   "pgmajfault": 30158643,
+   "usage": 7698681856,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 7668428800,
+    "RssAnon": 2562347008,
+    "RssFile": 5106081792,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 49.59,
+   "cache": 5106544640,
+   "rss": 2562347008,
+   "mapped_file": 5103169536,
+   "swap": 0,
+   "pgmajfault": 30158643,
+   "usage": 7698681856,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 7668428800,
+    "RssAnon": 2562347008,
+    "RssFile": 5106081792,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 50.1,
+   "cache": 5106544640,
+   "rss": 2562347008,
+   "mapped_file": 5103169536,
+   "swap": 0,
+   "pgmajfault": 30158643,
+   "usage": 7698681856,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 7668428800,
+    "RssAnon": 2562347008,
+    "RssFile": 5106081792,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 50.61,
+   "cache": 5106544640,
+   "rss": 2562347008,
+   "mapped_file": 5103169536,
+   "swap": 0,
+   "pgmajfault": 30158643,
+   "usage": 7698681856,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 7668428800,
+    "RssAnon": 2562347008,
+    "RssFile": 5106081792,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 51.12,
+   "cache": 5106548736,
+   "rss": 2562351104,
+   "mapped_file": 5103169536,
+   "swap": 0,
+   "pgmajfault": 30158643,
+   "usage": 7698677760,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 7668432896,
+    "RssAnon": 2562351104,
+    "RssFile": 5106081792,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 51.63,
+   "cache": 5106548736,
+   "rss": 2562351104,
+   "mapped_file": 5103169536,
+   "swap": 0,
+   "pgmajfault": 30158643,
+   "usage": 7698677760,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 7668432896,
+    "RssAnon": 2562351104,
+    "RssFile": 5106081792,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 52.14,
+   "cache": 5106548736,
+   "rss": 2562351104,
+   "mapped_file": 5103169536,
+   "swap": 0,
+   "pgmajfault": 30158643,
+   "usage": 7698677760,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 7668432896,
+    "RssAnon": 2562351104,
+    "RssFile": 5106081792,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 52.65,
+   "cache": 5106548736,
+   "rss": 2562351104,
+   "mapped_file": 5103169536,
+   "swap": 0,
+   "pgmajfault": 30158643,
+   "usage": 7698677760,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 7668432896,
+    "RssAnon": 2562351104,
+    "RssFile": 5106081792,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 53.17,
+   "cache": 5106548736,
+   "rss": 2562351104,
+   "mapped_file": 5103169536,
+   "swap": 0,
+   "pgmajfault": 30158643,
+   "usage": 7698677760,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 7668432896,
+    "RssAnon": 2562351104,
+    "RssFile": 5106081792,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 53.68,
+   "cache": 5106548736,
+   "rss": 2562351104,
+   "mapped_file": 5103169536,
+   "swap": 0,
+   "pgmajfault": 30158643,
+   "usage": 7698677760,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 7668432896,
+    "RssAnon": 2562351104,
+    "RssFile": 5106081792,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 54.18,
+   "cache": 5106548736,
+   "rss": 2562351104,
+   "mapped_file": 5103169536,
+   "swap": 0,
+   "pgmajfault": 30158643,
+   "usage": 7698677760,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 7668432896,
+    "RssAnon": 2562351104,
+    "RssFile": 5106081792,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 54.69,
+   "cache": 5106548736,
+   "rss": 2562351104,
+   "mapped_file": 5103169536,
+   "swap": 0,
+   "pgmajfault": 30158643,
+   "usage": 7698677760,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 7668432896,
+    "RssAnon": 2562351104,
+    "RssFile": 5106081792,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 55.2,
+   "cache": 5106548736,
+   "rss": 2562351104,
+   "mapped_file": 5103169536,
+   "swap": 0,
+   "pgmajfault": 30158643,
+   "usage": 7698677760,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 7668432896,
+    "RssAnon": 2562351104,
+    "RssFile": 5106081792,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 55.71,
+   "cache": 5106548736,
+   "rss": 2562351104,
+   "mapped_file": 5103169536,
+   "swap": 0,
+   "pgmajfault": 30158643,
+   "usage": 7698677760,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 7668432896,
+    "RssAnon": 2562351104,
+    "RssFile": 5106081792,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 56.22,
+   "cache": 5106548736,
+   "rss": 2562351104,
+   "mapped_file": 5103169536,
+   "swap": 0,
+   "pgmajfault": 30158643,
+   "usage": 7698677760,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 7668432896,
+    "RssAnon": 2562351104,
+    "RssFile": 5106081792,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 56.72,
+   "cache": 5106548736,
+   "rss": 2562351104,
+   "mapped_file": 5103169536,
+   "swap": 0,
+   "pgmajfault": 30158643,
+   "usage": 7698677760,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 7668432896,
+    "RssAnon": 2562351104,
+    "RssFile": 5106081792,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 57.23,
+   "cache": 5106548736,
+   "rss": 2562351104,
+   "mapped_file": 5103169536,
+   "swap": 0,
+   "pgmajfault": 30158643,
+   "usage": 7698677760,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 7668432896,
+    "RssAnon": 2562351104,
+    "RssFile": 5106081792,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 57.74,
+   "cache": 5106548736,
+   "rss": 2562351104,
+   "mapped_file": 5103169536,
+   "swap": 0,
+   "pgmajfault": 30158643,
+   "usage": 7698677760,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 7668432896,
+    "RssAnon": 2562351104,
+    "RssFile": 5106081792,
+    "VmSwap": 0
+   }
+  }
+ ],
+ "before": {
+  "stat": {
+   "cache": 5103443968,
+   "rss": 2562342912,
+   "mapped_file": 5102239744,
+   "swap": 0,
+   "pgmajfault": 28817680,
+   "usage": 7695441920,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0
+  },
+  "server": {
+   "alive": true,
+   "VmRSS": 7667486720,
+   "RssAnon": 2562342912,
+   "RssFile": 5105143808,
+   "VmSwap": 0
+  },
+  "probe": {
+   "ok": true,
+   "cache_n": 16941,
+   "prompt_n": 4,
+   "prompt_ms": 860.15,
+   "predicted_n": 16,
+   "tg_tps": 2.5794552835305007,
+   "wall_s": 7.170849323272705
+  }
+ },
+ "after_limit": {
+  "stat": {
+   "cache": 5103443968,
+   "rss": 2562342912,
+   "mapped_file": 5102239744,
+   "swap": 0,
+   "pgmajfault": 28817680,
+   "usage": 7695433728,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0
+  },
+  "server": {
+   "alive": true,
+   "VmRSS": 7667486720,
+   "RssAnon": 2562342912,
+   "RssFile": 5105143808,
+   "VmSwap": 0
+  }
+ },
+ "during_probe": {
+  "ok": true,
+  "cache_n": 16941,
+  "prompt_n": 4,
+  "prompt_ms": 24140.963,
+  "predicted_n": 16,
+  "tg_tps": 1.3069491876943218,
+  "wall_s": 36.47449851036072
+ },
+ "pytest": {
+  "rc": 0,
+  "tail": ".                                                                        [100%]\n1 passed in 31.48s\n",
+  "wall_s": 41.47739505767822
+ },
+ "after_probe": {
+  "ok": true,
+  "cache_n": 16941,
+  "prompt_n": 4,
+  "prompt_ms": 926.736,
+  "predicted_n": 16,
+  "tg_tps": 2.608259477477598,
+  "wall_s": 7.138415336608887
+ },
+ "after_probe_2": {
+  "ok": true,
+  "cache_n": 16941,
+  "prompt_n": 4,
+  "prompt_ms": 893.233,
+  "predicted_n": 16,
+  "tg_tps": 2.5632021571909354,
+  "wall_s": 7.216732025146484
+ },
+ "final": {
+  "stat": {
+   "cache": 5106548736,
+   "rss": 2562351104,
+   "mapped_file": 5103169536,
+   "swap": 0,
+   "pgmajfault": 30158643,
+   "usage": 7698677760,
+   "failcnt": 0,
+   "under_oom": 0,
+   "oom_kill": 0
+  },
+  "server": {
+   "alive": true,
+   "VmRSS": 7668432896,
+   "RssAnon": 2562351104,
+   "RssFile": 5106081792,
+   "VmSwap": 0
+  }
+ },
+ "summary": {
+  "tag": "B2_verytight_noswap",
+  "limit_gib": 7.367,
+  "swap_gib": 0.0,
+  "pytest_rc": 0,
+  "server_alive_end": true,
+  "oom_kills": 0,
+  "min_cache_gib": 3.7555923461914062,
+  "max_swap_gib": 0.0,
+  "majfault_delta": 1340963,
+  "before": {
+   "ok": true,
+   "cache_n": 16941,
+   "prompt_n": 4,
+   "prompt_ms": 860.15,
+   "predicted_n": 16,
+   "tg_tps": 2.5794552835305007,
+   "wall_s": 7.170849323272705
+  },
+  "during": {
+   "ok": true,
+   "cache_n": 16941,
+   "prompt_n": 4,
+   "prompt_ms": 24140.963,
+   "predicted_n": 16,
+   "tg_tps": 1.3069491876943218,
+   "wall_s": 36.47449851036072
+  },
+  "after": {
+   "ok": true,
+   "cache_n": 16941,
+   "prompt_n": 4,
+   "prompt_ms": 926.736,
+   "predicted_n": 16,
+   "tg_tps": 2.608259477477598,
+   "wall_s": 7.138415336608887
+  },
+  "after2": {
+   "ok": true,
+   "cache_n": 16941,
+   "prompt_n": 4,
+   "prompt_ms": 893.233,
+   "predicted_n": 16,
+   "tg_tps": 2.5632021571909354,
+   "wall_s": 7.216732025146484
+  }
+ }
+}

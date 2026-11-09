@@ -1,0 +1,73 @@
+preset,arm,decode_tps,cold_share
+anthropic_5m,constant speed,5.0,0.1895388273137302
+anthropic_5m,constant speed,8.0,0.1343659312611447
+anthropic_5m,constant speed,11.0,0.1131079332890458
+anthropic_5m,constant speed,15.0,0.0841578965770427
+anthropic_5m,constant speed,20.0,0.0462571238767875
+anthropic_5m,constant speed,30.0,0.0191601692248522
+anthropic_5m,constant speed,45.0,0.0084962064263487
+anthropic_5m,constant speed,60.0,0.0051047166183
+anthropic_5m,measured slowdown (thermal off),5.0,0.3332750603125765
+anthropic_5m,measured slowdown (thermal off),8.0,0.2227544491451348
+anthropic_5m,measured slowdown (thermal off),11.0,0.1674067340302786
+anthropic_5m,measured slowdown (thermal off),15.0,0.1329324149505262
+anthropic_5m,measured slowdown (thermal off),20.0,0.109681479668543
+anthropic_5m,measured slowdown (thermal off),30.0,0.0785986503968392
+anthropic_5m,measured slowdown (thermal off),45.0,0.0382154470123422
+anthropic_5m,measured slowdown (thermal off),60.0,0.0193000244746687
+anthropic_5m,assumed thermal on,5.0,0.4453690430404531
+anthropic_5m,assumed thermal on,8.0,0.316911996084053
+anthropic_5m,assumed thermal on,11.0,0.2360057340652424
+anthropic_5m,assumed thermal on,15.0,0.1734205097723855
+anthropic_5m,assumed thermal on,20.0,0.1381070591937344
+anthropic_5m,assumed thermal on,30.0,0.1074088318590259
+anthropic_5m,assumed thermal on,45.0,0.07758469983567
+anthropic_5m,assumed thermal on,60.0,0.0500332156218314
+openai_30m,constant speed,5.0,0.0096500122373343
+openai_30m,constant speed,8.0,0.0017831544351596
+openai_30m,constant speed,11.0,0.0004545295619034
+openai_30m,constant speed,15.0,0.0001048914373623
+openai_30m,constant speed,20.0,3.4963812454109994e-05
+openai_30m,constant speed,30.0,0.0
+openai_30m,constant speed,45.0,0.0
+openai_30m,constant speed,60.0,0.0
+openai_30m,measured slowdown (thermal off),5.0,0.0631446452921226
+openai_30m,measured slowdown (thermal off),8.0,0.0172371595398762
+openai_30m,measured slowdown (thermal off),11.0,0.0080766406768994
+openai_30m,measured slowdown (thermal off),15.0,0.0029369602461452
+openai_30m,measured slowdown (thermal off),20.0,0.0009440229362609
+openai_30m,measured slowdown (thermal off),30.0,0.0001048914373623
+openai_30m,measured slowdown (thermal off),45.0,0.0
+openai_30m,measured slowdown (thermal off),60.0,0.0
+openai_30m,assumed thermal on,5.0,0.106814447047306
+openai_30m,assumed thermal on,8.0,0.0767106045243173
+openai_30m,assumed thermal on,11.0,0.0453480647529806
+openai_30m,assumed thermal on,15.0,0.0167476661655186
+openai_30m,assumed thermal on,20.0,0.0085311702388028
+openai_30m,assumed thermal on,30.0,0.0021327925597007
+openai_30m,assumed thermal on,45.0,0.0004894933743575
+openai_30m,assumed thermal on,60.0,3.4963812454109994e-05
+anthropic_1h,constant speed,5.0,0.0005943848117198
+anthropic_1h,constant speed,8.0,0.0
+anthropic_1h,constant speed,11.0,0.0
+anthropic_1h,constant speed,15.0,0.0
+anthropic_1h,constant speed,20.0,0.0
+anthropic_1h,constant speed,30.0,0.0
+anthropic_1h,constant speed,45.0,0.0
+anthropic_1h,constant speed,60.0,0.0
+anthropic_1h,measured slowdown (thermal off),5.0,0.0097898674871508
+anthropic_1h,measured slowdown (thermal off),8.0,0.0019929373098842
+anthropic_1h,measured slowdown (thermal off),11.0,0.0005244571868116
+anthropic_1h,measured slowdown (thermal off),15.0,3.4963812454109994e-05
+anthropic_1h,measured slowdown (thermal off),20.0,0.0
+anthropic_1h,measured slowdown (thermal off),30.0,0.0
+anthropic_1h,measured slowdown (thermal off),45.0,0.0
+anthropic_1h,measured slowdown (thermal off),60.0,0.0
+anthropic_1h,assumed thermal on,5.0,0.0552777874899479
+anthropic_1h,assumed thermal on,8.0,0.0138456697318275
+anthropic_1h,assumed thermal on,11.0,0.0070277263032761
+anthropic_1h,assumed thermal on,15.0,0.0020279011223383
+anthropic_1h,assumed thermal on,20.0,0.0006992762490821
+anthropic_1h,assumed thermal on,30.0,0.0
+anthropic_1h,assumed thermal on,45.0,0.0
+anthropic_1h,assumed thermal on,60.0,0.0

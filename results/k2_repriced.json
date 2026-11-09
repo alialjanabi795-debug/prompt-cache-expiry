@@ -1,0 +1,41 @@
+{
+  "ping_output_tokens": {
+    "anthropic_5m": 1,
+    "anthropic_1h": 1,
+    "openai_30m": 16
+  },
+  "max_abs_change_pp": 0.09588443654768852,
+  "verdicts": {
+    "k": {
+      "K2_old": "KILL",
+      "K2_new": "KILL",
+      "strong_cells_new": 5
+    },
+    "k_const": {
+      "K2_old": "KILL",
+      "K2_new": "KILL",
+      "strong_cells_new": 2
+    },
+    "k_dgx": {
+      "K2_old": "KILL",
+      "K2_new": "KILL",
+      "strong_cells_new": 0
+    },
+    "k_laptop_off": {
+      "K2_old": "KILL",
+      "K2_new": "KILL",
+      "strong_cells_new": 1
+    },
+    "k_laptop_on": {
+      "K2_old": "KILL",
+      "K2_new": "KILL",
+      "strong_cells_new": 1
+    },
+    "k_measured": {
+      "K2_old": "KILL",
+      "K2_new": "KILL",
+      "strong_cells_new": 2
+    }
+  },
+  "note": "repriced optimal schedule (conservative); re-optimization lies in between"
+}

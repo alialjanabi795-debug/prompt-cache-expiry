@@ -1,0 +1,4 @@
+grid,preset,cold_share,K1_share,K2_saving,K3_rankings_differ
+robust_swesmith,anthropic_1h,0.0,0.0,0.0,False
+robust_swesmith,anthropic_5m,0.024895785085687818,0.12786355350282483,0.10514671823811945,False
+robust_swesmith,openai_30m,0.0003473830477072719,0.002421816859305038,0.0022112240889306865,False

@@ -1,0 +1,13 @@
+{
+  "total_usd": 4.629649,
+  "key_limit_usd": 10,
+  "budget_usd": 5.0,
+  "runs_usd": {
+    "provider_check_openrouter.json": 2.24245,
+    "provider_check_openrouter_supp_a1.json": 0.226136,
+    "provider_check_openrouter_supp_a2.json": 0.272424,
+    "provider_check_openrouter_smoke_other_session.jsonl": 0.832345
+  },
+  "other_usd": 1.0563,
+  "other_note": "probes (max_tokens, tokens per word) and the aborted first run (per-word tag tripled the prompt; stopped after 14 logged requests); see provider_check_openrouter_run1_aborted.jsonl"
+}

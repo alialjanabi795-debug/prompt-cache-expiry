@@ -1,0 +1,346 @@
+{
+ "args": {
+  "tag": "E2_anon_weights_anon_tight",
+  "cgroup": "dev",
+  "limit_gib": 8.266,
+  "swap_gib": 0.0,
+  "alloc_mb": 1200,
+  "hold_s": 30.0,
+  "prompt_file": "results/calib/last_prompt_nommap.txt",
+  "no_pytest": false
+ },
+ "samples": [
+  {
+   "t": 0.0,
+   "cache": 622432256,
+   "rss": 8231899136,
+   "mapped_file": 14454784,
+   "swap": 0,
+   "pgmajfault": 31253076,
+   "usage": 8874999808,
+   "failcnt": 846713,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 8248741888,
+    "RssAnon": 8231899136,
+    "RssFile": 16842752,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 0.51,
+   "cache": 189124608,
+   "rss": 8664653824,
+   "mapped_file": 13135872,
+   "swap": 0,
+   "pgmajfault": 31253076,
+   "usage": 8873697280,
+   "failcnt": 846713,
+   "under_oom": 0,
+   "oom_kill": 0,
+   "server": {
+    "alive": true,
+    "VmRSS": 8247005184,
+    "RssAnon": 8231899136,
+    "RssFile": 15106048,
+    "VmSwap": 0
+   }
+  },
+  {
+   "t": 1.01,
+   "cache": 45056,
+   "rss": 2127171584,
+   "mapped_file": 0,
+   "swap": 0,
+   "pgmajfault": 31253076,
+   "usage": 2147074048,
+   "failcnt": 846713,
+   "under_oom": 0,
+   "oom_kill": 2,
+   "server": {
+    "alive": true
+   }
+  },
+  {
+   "t": 1.52,
+   "cache": 45056,
+   "rss": 0,
+   "mapped_file": 0,
+   "swap": 0,
+   "pgmajfault": 31253076,
+   "usage": 3661824,
+   "failcnt": 846713,
+   "under_oom": 0,
+   "oom_kill": 2,
+   "server": {
+    "alive": true
+   }
+  },
+  {
+   "t": 2.03,
+   "cache": 45056,
+   "rss": 0,
+   "mapped_file": 0,
+   "swap": 0,
+   "pgmajfault": 31253076,
+   "usage": 3661824,
+   "failcnt": 846713,
+   "under_oom": 0,
+   "oom_kill": 2,
+   "server": {
+    "alive": false
+   }
+  },
+  {
+   "t": 2.54,
+   "cache": 45056,
+   "rss": 0,
+   "mapped_file": 0,
+   "swap": 0,
+   "pgmajfault": 31253076,
+   "usage": 3661824,
+   "failcnt": 846713,
+   "under_oom": 0,
+   "oom_kill": 2,
+   "server": {
+    "alive": false
+   }
+  },
+  {
+   "t": 3.05,
+   "cache": 45056,
+   "rss": 0,
+   "mapped_file": 0,
+   "swap": 0,
+   "pgmajfault": 31253076,
+   "usage": 3661824,
+   "failcnt": 846713,
+   "under_oom": 0,
+   "oom_kill": 2,
+   "server": {
+    "alive": false
+   }
+  },
+  {
+   "t": 3.56,
+   "cache": 45056,
+   "rss": 0,
+   "mapped_file": 0,
+   "swap": 0,
+   "pgmajfault": 31253076,
+   "usage": 3657728,
+   "failcnt": 846713,
+   "under_oom": 0,
+   "oom_kill": 2,
+   "server": {
+    "alive": false
+   }
+  },
+  {
+   "t": 4.06,
+   "cache": 45056,
+   "rss": 0,
+   "mapped_file": 0,
+   "swap": 0,
+   "pgmajfault": 31253076,
+   "usage": 3657728,
+   "failcnt": 846713,
+   "under_oom": 0,
+   "oom_kill": 2,
+   "server": {
+    "alive": false
+   }
+  },
+  {
+   "t": 4.57,
+   "cache": 45056,
+   "rss": 0,
+   "mapped_file": 0,
+   "swap": 0,
+   "pgmajfault": 31253076,
+   "usage": 3657728,
+   "failcnt": 846713,
+   "under_oom": 0,
+   "oom_kill": 2,
+   "server": {
+    "alive": false
+   }
+  },
+  {
+   "t": 5.08,
+   "cache": 45056,
+   "rss": 0,
+   "mapped_file": 0,
+   "swap": 0,
+   "pgmajfault": 31253076,
+   "usage": 3657728,
+   "failcnt": 846713,
+   "under_oom": 0,
+   "oom_kill": 2,
+   "server": {
+    "alive": false
+   }
+  },
+  {
+   "t": 5.59,
+   "cache": 45056,
+   "rss": 0,
+   "mapped_file": 0,
+   "swap": 0,
+   "pgmajfault": 31253076,
+   "usage": 3657728,
+   "failcnt": 846713,
+   "under_oom": 0,
+   "oom_kill": 2,
+   "server": {
+    "alive": false
+   }
+  },
+  {
+   "t": 6.1,
+   "cache": 45056,
+   "rss": 0,
+   "mapped_file": 0,
+   "swap": 0,
+   "pgmajfault": 31253076,
+   "usage": 3657728,
+   "failcnt": 846713,
+   "under_oom": 0,
+   "oom_kill": 2,
+   "server": {
+    "alive": false
+   }
+  },
+  {
+   "t": 6.6,
+   "cache": 45056,
+   "rss": 0,
+   "mapped_file": 0,
+   "swap": 0,
+   "pgmajfault": 31253076,
+   "usage": 3657728,
+   "failcnt": 846713,
+   "under_oom": 0,
+   "oom_kill": 2,
+   "server": {
+    "alive": false
+   }
+  }
+ ],
+ "before": {
+  "stat": {
+   "cache": 3298938880,
+   "rss": 8231763968,
+   "mapped_file": 14254080,
+   "swap": 0,
+   "pgmajfault": 31253076,
+   "usage": 11552026624,
+   "failcnt": 846713,
+   "under_oom": 0,
+   "oom_kill": 0
+  },
+  "server": {
+   "alive": true,
+   "VmRSS": 8248606720,
+   "RssAnon": 8231763968,
+   "RssFile": 16842752,
+   "VmSwap": 0
+  },
+  "probe": {
+   "ok": true,
+   "cache_n": 16941,
+   "prompt_n": 4,
+   "prompt_ms": 932.154,
+   "predicted_n": 16,
+   "tg_tps": 2.656517441780345,
+   "wall_s": 7.060187101364136
+  }
+ },
+ "after_limit": {
+  "stat": {
+   "cache": 622432256,
+   "rss": 8231899136,
+   "mapped_file": 14454784,
+   "swap": 0,
+   "pgmajfault": 31253076,
+   "usage": 8874999808,
+   "failcnt": 846713,
+   "under_oom": 0,
+   "oom_kill": 0
+  },
+  "server": {
+   "alive": true,
+   "VmRSS": 8248741888,
+   "RssAnon": 8231899136,
+   "RssFile": 16842752,
+   "VmSwap": 0
+  }
+ },
+ "during_probe": {
+  "ok": false,
+  "error": "URLError(ConnectionRefusedError(111, 'Connection refused'))"
+ },
+ "pytest": {
+  "rc": -9,
+  "tail": "",
+  "wall_s": 5.005014896392822
+ },
+ "after_probe": {
+  "ok": false,
+  "error": "URLError(ConnectionRefusedError(111, 'Connection refused'))"
+ },
+ "after_probe_2": {
+  "ok": false,
+  "error": "URLError(ConnectionRefusedError(111, 'Connection refused'))"
+ },
+ "final": {
+  "stat": {
+   "cache": 45056,
+   "rss": 0,
+   "mapped_file": 0,
+   "swap": 0,
+   "pgmajfault": 31253076,
+   "usage": 3657728,
+   "failcnt": 846713,
+   "under_oom": 0,
+   "oom_kill": 2
+  },
+  "server": {
+   "alive": false
+  }
+ },
+ "summary": {
+  "tag": "E2_anon_weights_anon_tight",
+  "limit_gib": 8.266,
+  "swap_gib": 0.0,
+  "pytest_rc": -9,
+  "server_alive_end": false,
+  "oom_kills": 2,
+  "min_cache_gib": 4.1961669921875e-05,
+  "max_swap_gib": 0.0,
+  "majfault_delta": 0,
+  "before": {
+   "ok": true,
+   "cache_n": 16941,
+   "prompt_n": 4,
+   "prompt_ms": 932.154,
+   "predicted_n": 16,
+   "tg_tps": 2.656517441780345,
+   "wall_s": 7.060187101364136
+  },
+  "during": {
+   "ok": false,
+   "error": "URLError(ConnectionRefusedError(111, 'Connection refused'))"
+  },
+  "after": {
+   "ok": false,
+   "error": "URLError(ConnectionRefusedError(111, 'Connection refused'))"
+  },
+  "after2": {
+   "ok": false,
+   "error": "URLError(ConnectionRefusedError(111, 'Connection refused'))"
+  }
+ }
+}

@@ -1,0 +1,15 @@
+{
+  "traj_id": "chatcmpl-1a5c810c0675ed379497fba6029a8a9b",
+  "sample_order": 4,
+  "n_steps": 61,
+  "sample_median_steps": 61.0,
+  "device": "weak_edge",
+  "thermal": "off (measured device model)",
+  "network": "average",
+  "preset": "anthropic_5m",
+  "ttl_s": 300,
+  "policy": "keystep",
+  "decode_tps": 11.0,
+  "total_s": 2511.702137592196,
+  "selection_rule": "fewest |n_steps - sample median| among trajectories with at least one expired-cache delegation; ties by sample order"
+}

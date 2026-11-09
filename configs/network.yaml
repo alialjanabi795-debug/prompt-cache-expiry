@@ -1,0 +1,25 @@
+# Network profiles (bandwidth/RTT as specified in the Phase-0 brief; symmetric up/down is an
+# ASSUMPTION). Radio energy per byte and tail energy per request are ASSUMPTIONS (order of
+# magnitude from Wi-Fi / LTE measurement literature) and only affect the energy columns.
+profiles:
+  good:
+    down_mbps: 100.0
+    up_mbps: 100.0
+    rtt_s: 0.030
+    j_per_byte_up: 1.0e-7
+    j_per_byte_down: 5.0e-8
+    tail_j: 0.05
+  average:
+    down_mbps: 20.0
+    up_mbps: 20.0
+    rtt_s: 0.080
+    j_per_byte_up: 1.0e-6
+    j_per_byte_down: 3.0e-7
+    tail_j: 0.5
+  weak:
+    down_mbps: 2.0
+    up_mbps: 2.0
+    rtt_s: 0.250
+    j_per_byte_up: 5.0e-6
+    j_per_byte_down: 1.5e-6
+    tail_j: 1.5

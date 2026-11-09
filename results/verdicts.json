@@ -1,0 +1,1212 @@
+{
+  "frozen": {
+    "K1": "KILL",
+    "K2": "KILL",
+    "K3": "KILL",
+    "K3_raw_rule_kill": true,
+    "K5": "DROP_COMPONENT_8",
+    "K6": "COUPLING_WEAK_SENSITIVITY_ONLY",
+    "K7": "DROP_DELEGATE_EARLY_CLAIM",
+    "reporting_only_realistic_le_60min": {
+      "K1": "KILL",
+      "K2": "KILL",
+      "K3": "KILL",
+      "K3_raw_rule_kill": true,
+      "K5": "DROP_COMPONENT_8",
+      "K6": "COUPLING_WEAK_SENSITIVITY_ONLY",
+      "K7": "DROP_DELEGATE_EARLY_CLAIM",
+      "cells": [
+        "anthropic_1h|30",
+        "anthropic_5m|30",
+        "openai_30m|30"
+      ]
+    },
+    "tool_rule": {
+      "tool_share": 0.04139771531660209,
+      "action": "NO_ACTION"
+    },
+    "cells": {
+      "anthropic_5m|5": {
+        "K1": true,
+        "K2": true,
+        "K2_strong": true,
+        "K3": true,
+        "K5": true,
+        "K6": true,
+        "K7": true,
+        "borderline": {
+          "K1": false,
+          "K2": false,
+          "K5": false,
+          "K7": false
+        }
+      },
+      "anthropic_5m|11": {
+        "K1": true,
+        "K2": true,
+        "K2_strong": true,
+        "K3": true,
+        "K5": true,
+        "K6": true,
+        "K7": true,
+        "borderline": {
+          "K1": false,
+          "K2": false,
+          "K5": false,
+          "K7": false
+        }
+      },
+      "anthropic_5m|30": {
+        "K1": true,
+        "K2": true,
+        "K2_strong": true,
+        "K3": false,
+        "K5": false,
+        "K6": false,
+        "K7": false,
+        "borderline": {
+          "K1": false,
+          "K2": false,
+          "K5": false,
+          "K7": false
+        }
+      },
+      "anthropic_1h|5": {
+        "K1": true,
+        "K2": true,
+        "K2_strong": true,
+        "K3": false,
+        "K5": false,
+        "K6": false,
+        "K7": false,
+        "borderline": {
+          "K1": false,
+          "K2": false,
+          "K5": false,
+          "K7": true
+        }
+      },
+      "anthropic_1h|11": {
+        "K1": false,
+        "K2": false,
+        "K2_strong": false,
+        "K3": false,
+        "K5": false,
+        "K6": false,
+        "K7": false,
+        "borderline": {
+          "K1": false,
+          "K2": false,
+          "K5": false,
+          "K7": false
+        }
+      },
+      "anthropic_1h|30": {
+        "K1": false,
+        "K2": false,
+        "K2_strong": false,
+        "K3": false,
+        "K5": false,
+        "K6": false,
+        "K7": false,
+        "borderline": {
+          "K1": false,
+          "K2": false,
+          "K5": false,
+          "K7": false
+        }
+      },
+      "openai_30m|5": {
+        "K1": true,
+        "K2": true,
+        "K2_strong": true,
+        "K3": false,
+        "K5": false,
+        "K6": false,
+        "K7": false,
+        "borderline": {
+          "K1": false,
+          "K2": false,
+          "K5": false,
+          "K7": true
+        }
+      },
+      "openai_30m|11": {
+        "K1": true,
+        "K2": true,
+        "K2_strong": false,
+        "K3": false,
+        "K5": false,
+        "K6": false,
+        "K7": false,
+        "borderline": {
+          "K1": false,
+          "K2": false,
+          "K5": false,
+          "K7": false
+        }
+      },
+      "openai_30m|30": {
+        "K1": false,
+        "K2": false,
+        "K2_strong": false,
+        "K3": false,
+        "K5": false,
+        "K6": false,
+        "K7": false,
+        "borderline": {
+          "K1": false,
+          "K2": false,
+          "K5": false,
+          "K7": false
+        }
+      }
+    },
+    "profile": "weak_edge",
+    "arm": "thermal_on",
+    "K2_status": "FINAL (provider check confirmed via OpenRouter with pinned providers, D9; post-hoc amendments D9-A1 message-level GPT extend, D9-A2 extra GPT delays)"
+  },
+  "K2_status": "FINAL (provider check confirmed via OpenRouter with pinned providers, D9; post-hoc amendments D9-A1 message-level GPT extend, D9-A2 extra GPT delays)",
+  "by_grid": {
+    "k": {
+      "K1": "KILL",
+      "K2": "KILL",
+      "K3": "KILL",
+      "K3_raw_rule_kill": true,
+      "K5": "DROP_COMPONENT_8",
+      "K6": "COUPLING_WEAK_SENSITIVITY_ONLY",
+      "K7": "DROP_DELEGATE_EARLY_CLAIM",
+      "reporting_only_realistic_le_60min": {
+        "K1": "KILL",
+        "K2": "KILL",
+        "K3": "KILL",
+        "K3_raw_rule_kill": true,
+        "K5": "DROP_COMPONENT_8",
+        "K6": "COUPLING_WEAK_SENSITIVITY_ONLY",
+        "K7": "DROP_DELEGATE_EARLY_CLAIM",
+        "cells": [
+          "anthropic_1h|30",
+          "anthropic_5m|30",
+          "openai_30m|30"
+        ]
+      },
+      "tool_rule": {
+        "tool_share": 0.04139771531660209,
+        "action": "NO_ACTION"
+      },
+      "cells": {
+        "anthropic_5m|5": {
+          "K1": true,
+          "K2": true,
+          "K2_strong": true,
+          "K3": true,
+          "K5": true,
+          "K6": true,
+          "K7": true,
+          "borderline": {
+            "K1": false,
+            "K2": false,
+            "K5": false,
+            "K7": false
+          }
+        },
+        "anthropic_5m|11": {
+          "K1": true,
+          "K2": true,
+          "K2_strong": true,
+          "K3": true,
+          "K5": true,
+          "K6": true,
+          "K7": true,
+          "borderline": {
+            "K1": false,
+            "K2": false,
+            "K5": false,
+            "K7": false
+          }
+        },
+        "anthropic_5m|30": {
+          "K1": true,
+          "K2": true,
+          "K2_strong": true,
+          "K3": false,
+          "K5": false,
+          "K6": false,
+          "K7": false,
+          "borderline": {
+            "K1": false,
+            "K2": false,
+            "K5": false,
+            "K7": false
+          }
+        },
+        "anthropic_1h|5": {
+          "K1": true,
+          "K2": true,
+          "K2_strong": true,
+          "K3": false,
+          "K5": false,
+          "K6": false,
+          "K7": false,
+          "borderline": {
+            "K1": false,
+            "K2": false,
+            "K5": false,
+            "K7": true
+          }
+        },
+        "anthropic_1h|11": {
+          "K1": false,
+          "K2": false,
+          "K2_strong": false,
+          "K3": false,
+          "K5": false,
+          "K6": false,
+          "K7": false,
+          "borderline": {
+            "K1": false,
+            "K2": false,
+            "K5": false,
+            "K7": false
+          }
+        },
+        "anthropic_1h|30": {
+          "K1": false,
+          "K2": false,
+          "K2_strong": false,
+          "K3": false,
+          "K5": false,
+          "K6": false,
+          "K7": false,
+          "borderline": {
+            "K1": false,
+            "K2": false,
+            "K5": false,
+            "K7": false
+          }
+        },
+        "openai_30m|5": {
+          "K1": true,
+          "K2": true,
+          "K2_strong": true,
+          "K3": false,
+          "K5": false,
+          "K6": false,
+          "K7": false,
+          "borderline": {
+            "K1": false,
+            "K2": false,
+            "K5": false,
+            "K7": true
+          }
+        },
+        "openai_30m|11": {
+          "K1": true,
+          "K2": true,
+          "K2_strong": false,
+          "K3": false,
+          "K5": false,
+          "K6": false,
+          "K7": false,
+          "borderline": {
+            "K1": false,
+            "K2": false,
+            "K5": false,
+            "K7": false
+          }
+        },
+        "openai_30m|30": {
+          "K1": false,
+          "K2": false,
+          "K2_strong": false,
+          "K3": false,
+          "K5": false,
+          "K6": false,
+          "K7": false,
+          "borderline": {
+            "K1": false,
+            "K2": false,
+            "K5": false,
+            "K7": false
+          }
+        }
+      },
+      "profile": "weak_edge",
+      "arm": "thermal_on",
+      "K2_status": "FINAL (provider check confirmed via OpenRouter with pinned providers, D9; post-hoc amendments D9-A1 message-level GPT extend, D9-A2 extra GPT delays)"
+    },
+    "k_measured": {
+      "K1": "KILL",
+      "K2": "KILL",
+      "K3": "KILL",
+      "K3_raw_rule_kill": true,
+      "K5": "DROP_COMPONENT_8",
+      "K6": "COUPLING_WEAK_SENSITIVITY_ONLY",
+      "K7": "DROP_DELEGATE_EARLY_CLAIM",
+      "reporting_only_realistic_le_60min": {
+        "K1": "KILL",
+        "K2": "KILL",
+        "K3": "KILL",
+        "K3_raw_rule_kill": true,
+        "K5": "DROP_COMPONENT_8",
+        "K6": "COUPLING_WEAK_SENSITIVITY_ONLY",
+        "K7": "DROP_DELEGATE_EARLY_CLAIM",
+        "cells": [
+          "anthropic_1h|11",
+          "anthropic_1h|30",
+          "anthropic_5m|11",
+          "anthropic_5m|30",
+          "openai_30m|11",
+          "openai_30m|30"
+        ]
+      },
+      "tool_rule": {
+        "tool_share": 0.051829764001210074,
+        "action": "NO_ACTION"
+      },
+      "cells": {
+        "anthropic_5m|5": {
+          "K1": true,
+          "K2": true,
+          "K2_strong": true,
+          "K3": true,
+          "K5": true,
+          "K6": true,
+          "K7": true,
+          "borderline": {
+            "K1": false,
+            "K2": false,
+            "K5": false,
+            "K7": false
+          }
+        },
+        "anthropic_5m|11": {
+          "K1": true,
+          "K2": true,
+          "K2_strong": true,
+          "K3": false,
+          "K5": false,
+          "K6": false,
+          "K7": false,
+          "borderline": {
+            "K1": false,
+            "K2": false,
+            "K5": false,
+            "K7": false
+          }
+        },
+        "anthropic_5m|30": {
+          "K1": true,
+          "K2": true,
+          "K2_strong": false,
+          "K3": false,
+          "K5": false,
+          "K6": false,
+          "K7": false,
+          "borderline": {
+            "K1": false,
+            "K2": false,
+            "K5": false,
+            "K7": false
+          }
+        },
+        "anthropic_1h|5": {
+          "K1": false,
+          "K2": false,
+          "K2_strong": false,
+          "K3": false,
+          "K5": false,
+          "K6": false,
+          "K7": false,
+          "borderline": {
+            "K1": false,
+            "K2": false,
+            "K5": false,
+            "K7": false
+          }
+        },
+        "anthropic_1h|11": {
+          "K1": false,
+          "K2": false,
+          "K2_strong": false,
+          "K3": false,
+          "K5": false,
+          "K6": false,
+          "K7": false,
+          "borderline": {
+            "K1": false,
+            "K2": false,
+            "K5": false,
+            "K7": false
+          }
+        },
+        "anthropic_1h|30": {
+          "K1": false,
+          "K2": false,
+          "K2_strong": false,
+          "K3": false,
+          "K5": false,
+          "K6": false,
+          "K7": false,
+          "borderline": {
+            "K1": false,
+            "K2": false,
+            "K5": false,
+            "K7": false
+          }
+        },
+        "openai_30m|5": {
+          "K1": true,
+          "K2": true,
+          "K2_strong": false,
+          "K3": false,
+          "K5": false,
+          "K6": false,
+          "K7": false,
+          "borderline": {
+            "K1": false,
+            "K2": false,
+            "K5": false,
+            "K7": false
+          }
+        },
+        "openai_30m|11": {
+          "K1": false,
+          "K2": false,
+          "K2_strong": false,
+          "K3": false,
+          "K5": false,
+          "K6": false,
+          "K7": false,
+          "borderline": {
+            "K1": false,
+            "K2": false,
+            "K5": false,
+            "K7": false
+          }
+        },
+        "openai_30m|30": {
+          "K1": false,
+          "K2": false,
+          "K2_strong": false,
+          "K3": false,
+          "K5": false,
+          "K6": false,
+          "K7": false,
+          "borderline": {
+            "K1": false,
+            "K2": false,
+            "K5": false,
+            "K7": false
+          }
+        }
+      },
+      "profile": "weak_edge",
+      "arm": "thermal_off",
+      "K2_status": "FINAL (provider check confirmed via OpenRouter with pinned providers, D9; post-hoc amendments D9-A1 message-level GPT extend, D9-A2 extra GPT delays)"
+    },
+    "k_const": {
+      "K1": "KILL",
+      "K2": "KILL",
+      "K3": "KILL",
+      "K3_raw_rule_kill": true,
+      "K5": "DROP_COMPONENT_8",
+      "K6": "COUPLING_WEAK_SENSITIVITY_ONLY",
+      "K7": "DROP_DELEGATE_EARLY_CLAIM",
+      "reporting_only_realistic_le_60min": {
+        "K1": "KILL",
+        "K2": "KILL",
+        "K3": "KILL",
+        "K3_raw_rule_kill": true,
+        "K5": "DROP_COMPONENT_8",
+        "K6": "COUPLING_WEAK_SENSITIVITY_ONLY",
+        "K7": "DROP_DELEGATE_EARLY_CLAIM",
+        "cells": [
+          "anthropic_1h|11",
+          "anthropic_1h|30",
+          "anthropic_5m|11",
+          "anthropic_5m|30",
+          "openai_30m|11",
+          "openai_30m|30"
+        ]
+      },
+      "tool_rule": {
+        "tool_share": 0.09141783549141182,
+        "action": "NO_ACTION"
+      },
+      "cells": {
+        "anthropic_5m|5": {
+          "K1": true,
+          "K2": true,
+          "K2_strong": true,
+          "K3": false,
+          "K5": false,
+          "K6": false,
+          "K7": false,
+          "borderline": {
+            "K1": false,
+            "K2": false,
+            "K5": false,
+            "K7": false
+          }
+        },
+        "anthropic_5m|11": {
+          "K1": true,
+          "K2": true,
+          "K2_strong": true,
+          "K3": false,
+          "K5": false,
+          "K6": false,
+          "K7": false,
+          "borderline": {
+            "K1": false,
+            "K2": false,
+            "K5": false,
+            "K7": false
+          }
+        },
+        "anthropic_5m|30": {
+          "K1": false,
+          "K2": false,
+          "K2_strong": false,
+          "K3": false,
+          "K5": false,
+          "K6": false,
+          "K7": false,
+          "borderline": {
+            "K1": false,
+            "K2": false,
+            "K5": false,
+            "K7": false
+          }
+        },
+        "anthropic_1h|5": {
+          "K1": false,
+          "K2": false,
+          "K2_strong": false,
+          "K3": false,
+          "K5": false,
+          "K6": false,
+          "K7": false,
+          "borderline": {
+            "K1": false,
+            "K2": false,
+            "K5": false,
+            "K7": false
+          }
+        },
+        "anthropic_1h|11": {
+          "K1": false,
+          "K2": false,
+          "K2_strong": false,
+          "K3": false,
+          "K5": false,
+          "K6": false,
+          "K7": false,
+          "borderline": {
+            "K1": false,
+            "K2": false,
+            "K5": false,
+            "K7": false
+          }
+        },
+        "anthropic_1h|30": {
+          "K1": false,
+          "K2": false,
+          "K2_strong": false,
+          "K3": false,
+          "K5": false,
+          "K6": false,
+          "K7": false,
+          "borderline": {
+            "K1": false,
+            "K2": false,
+            "K5": false,
+            "K7": false
+          }
+        },
+        "openai_30m|5": {
+          "K1": false,
+          "K2": false,
+          "K2_strong": false,
+          "K3": false,
+          "K5": false,
+          "K6": false,
+          "K7": false,
+          "borderline": {
+            "K1": false,
+            "K2": false,
+            "K5": false,
+            "K7": false
+          }
+        },
+        "openai_30m|11": {
+          "K1": false,
+          "K2": false,
+          "K2_strong": false,
+          "K3": false,
+          "K5": false,
+          "K6": false,
+          "K7": false,
+          "borderline": {
+            "K1": false,
+            "K2": false,
+            "K5": false,
+            "K7": false
+          }
+        },
+        "openai_30m|30": {
+          "K1": false,
+          "K2": false,
+          "K2_strong": false,
+          "K3": false,
+          "K5": false,
+          "K6": false,
+          "K7": false,
+          "borderline": {
+            "K1": false,
+            "K2": false,
+            "K5": false,
+            "K7": false
+          }
+        }
+      },
+      "profile": "weak_edge",
+      "arm": "const",
+      "K2_status": "FINAL (provider check confirmed via OpenRouter with pinned providers, D9; post-hoc amendments D9-A1 message-level GPT extend, D9-A2 extra GPT delays)"
+    },
+    "k_laptop_on": {
+      "K1": "KILL",
+      "K2": "KILL",
+      "K3": "KILL",
+      "K3_raw_rule_kill": true,
+      "K5": "DROP_COMPONENT_8",
+      "K6": "COUPLING_WEAK_SENSITIVITY_ONLY",
+      "K7": "DROP_DELEGATE_EARLY_CLAIM",
+      "reporting_only_realistic_le_60min": {
+        "K1": "KILL",
+        "K2": "KILL",
+        "K3": "KILL",
+        "K3_raw_rule_kill": true,
+        "K5": "DROP_COMPONENT_8",
+        "K6": "COUPLING_WEAK_SENSITIVITY_ONLY",
+        "K7": "DROP_DELEGATE_EARLY_CLAIM",
+        "cells": [
+          "anthropic_1h|11",
+          "anthropic_1h|30",
+          "anthropic_5m|11",
+          "anthropic_5m|30",
+          "openai_30m|11",
+          "openai_30m|30"
+        ]
+      },
+      "tool_rule": {
+        "tool_share": 0.05122919587290967,
+        "action": "NO_ACTION"
+      },
+      "cells": {
+        "anthropic_5m|5": {
+          "K1": true,
+          "K2": true,
+          "K2_strong": true,
+          "K3": true,
+          "K5": true,
+          "K6": true,
+          "K7": false,
+          "borderline": {
+            "K1": false,
+            "K2": false,
+            "K5": false,
+            "K7": false
+          }
+        },
+        "anthropic_5m|11": {
+          "K1": true,
+          "K2": true,
+          "K2_strong": false,
+          "K3": true,
+          "K5": false,
+          "K6": false,
+          "K7": false,
+          "borderline": {
+            "K1": false,
+            "K2": false,
+            "K5": false,
+            "K7": false
+          }
+        },
+        "anthropic_5m|30": {
+          "K1": false,
+          "K2": false,
+          "K2_strong": false,
+          "K3": false,
+          "K5": false,
+          "K6": false,
+          "K7": false,
+          "borderline": {
+            "K1": false,
+            "K2": false,
+            "K5": false,
+            "K7": false
+          }
+        },
+        "anthropic_1h|5": {
+          "K1": false,
+          "K2": false,
+          "K2_strong": false,
+          "K3": false,
+          "K5": false,
+          "K6": false,
+          "K7": false,
+          "borderline": {
+            "K1": false,
+            "K2": false,
+            "K5": false,
+            "K7": false
+          }
+        },
+        "anthropic_1h|11": {
+          "K1": false,
+          "K2": false,
+          "K2_strong": false,
+          "K3": false,
+          "K5": false,
+          "K6": false,
+          "K7": false,
+          "borderline": {
+            "K1": false,
+            "K2": false,
+            "K5": false,
+            "K7": false
+          }
+        },
+        "anthropic_1h|30": {
+          "K1": false,
+          "K2": false,
+          "K2_strong": false,
+          "K3": false,
+          "K5": false,
+          "K6": false,
+          "K7": false,
+          "borderline": {
+            "K1": false,
+            "K2": false,
+            "K5": false,
+            "K7": false
+          }
+        },
+        "openai_30m|5": {
+          "K1": false,
+          "K2": false,
+          "K2_strong": false,
+          "K3": false,
+          "K5": false,
+          "K6": false,
+          "K7": false,
+          "borderline": {
+            "K1": false,
+            "K2": false,
+            "K5": false,
+            "K7": false
+          }
+        },
+        "openai_30m|11": {
+          "K1": false,
+          "K2": false,
+          "K2_strong": false,
+          "K3": false,
+          "K5": false,
+          "K6": false,
+          "K7": false,
+          "borderline": {
+            "K1": false,
+            "K2": false,
+            "K5": false,
+            "K7": false
+          }
+        },
+        "openai_30m|30": {
+          "K1": false,
+          "K2": false,
+          "K2_strong": false,
+          "K3": false,
+          "K5": false,
+          "K6": false,
+          "K7": false,
+          "borderline": {
+            "K1": false,
+            "K2": false,
+            "K5": false,
+            "K7": false
+          }
+        }
+      },
+      "profile": "laptop_16gb",
+      "arm": "thermal_on",
+      "K2_status": "FINAL (provider check confirmed via OpenRouter with pinned providers, D9; post-hoc amendments D9-A1 message-level GPT extend, D9-A2 extra GPT delays)"
+    },
+    "k_laptop_off": {
+      "K1": "KILL",
+      "K2": "KILL",
+      "K3": "KILL",
+      "K3_raw_rule_kill": true,
+      "K5": "DROP_COMPONENT_8",
+      "K6": "COUPLING_WEAK_SENSITIVITY_ONLY",
+      "K7": "DROP_DELEGATE_EARLY_CLAIM",
+      "reporting_only_realistic_le_60min": {
+        "K1": "KILL",
+        "K2": "KILL",
+        "K3": "KILL",
+        "K3_raw_rule_kill": true,
+        "K5": "DROP_COMPONENT_8",
+        "K6": "COUPLING_WEAK_SENSITIVITY_ONLY",
+        "K7": "DROP_DELEGATE_EARLY_CLAIM",
+        "cells": [
+          "anthropic_1h|11",
+          "anthropic_1h|30",
+          "anthropic_1h|5",
+          "anthropic_5m|11",
+          "anthropic_5m|30",
+          "anthropic_5m|5",
+          "openai_30m|11",
+          "openai_30m|30",
+          "openai_30m|5"
+        ]
+      },
+      "tool_rule": {
+        "tool_share": 0.05207643039788835,
+        "action": "NO_ACTION"
+      },
+      "cells": {
+        "anthropic_5m|5": {
+          "K1": true,
+          "K2": true,
+          "K2_strong": true,
+          "K3": true,
+          "K5": true,
+          "K6": true,
+          "K7": false,
+          "borderline": {
+            "K1": false,
+            "K2": false,
+            "K5": false,
+            "K7": false
+          }
+        },
+        "anthropic_5m|11": {
+          "K1": true,
+          "K2": true,
+          "K2_strong": false,
+          "K3": true,
+          "K5": false,
+          "K6": false,
+          "K7": false,
+          "borderline": {
+            "K1": false,
+            "K2": false,
+            "K5": false,
+            "K7": false
+          }
+        },
+        "anthropic_5m|30": {
+          "K1": false,
+          "K2": false,
+          "K2_strong": false,
+          "K3": false,
+          "K5": false,
+          "K6": false,
+          "K7": false,
+          "borderline": {
+            "K1": false,
+            "K2": false,
+            "K5": false,
+            "K7": false
+          }
+        },
+        "anthropic_1h|5": {
+          "K1": false,
+          "K2": false,
+          "K2_strong": false,
+          "K3": false,
+          "K5": false,
+          "K6": false,
+          "K7": false,
+          "borderline": {
+            "K1": false,
+            "K2": false,
+            "K5": false,
+            "K7": false
+          }
+        },
+        "anthropic_1h|11": {
+          "K1": false,
+          "K2": false,
+          "K2_strong": false,
+          "K3": false,
+          "K5": false,
+          "K6": false,
+          "K7": false,
+          "borderline": {
+            "K1": false,
+            "K2": false,
+            "K5": false,
+            "K7": false
+          }
+        },
+        "anthropic_1h|30": {
+          "K1": false,
+          "K2": false,
+          "K2_strong": false,
+          "K3": false,
+          "K5": false,
+          "K6": false,
+          "K7": false,
+          "borderline": {
+            "K1": false,
+            "K2": false,
+            "K5": false,
+            "K7": false
+          }
+        },
+        "openai_30m|5": {
+          "K1": false,
+          "K2": false,
+          "K2_strong": false,
+          "K3": false,
+          "K5": false,
+          "K6": false,
+          "K7": false,
+          "borderline": {
+            "K1": false,
+            "K2": false,
+            "K5": false,
+            "K7": false
+          }
+        },
+        "openai_30m|11": {
+          "K1": false,
+          "K2": false,
+          "K2_strong": false,
+          "K3": false,
+          "K5": false,
+          "K6": false,
+          "K7": false,
+          "borderline": {
+            "K1": false,
+            "K2": false,
+            "K5": false,
+            "K7": false
+          }
+        },
+        "openai_30m|30": {
+          "K1": false,
+          "K2": false,
+          "K2_strong": false,
+          "K3": false,
+          "K5": false,
+          "K6": false,
+          "K7": false,
+          "borderline": {
+            "K1": false,
+            "K2": false,
+            "K5": false,
+            "K7": false
+          }
+        }
+      },
+      "profile": "laptop_16gb",
+      "arm": "thermal_off",
+      "K2_status": "FINAL (provider check confirmed via OpenRouter with pinned providers, D9; post-hoc amendments D9-A1 message-level GPT extend, D9-A2 extra GPT delays)"
+    },
+    "k_dgx": {
+      "K1": "KILL",
+      "K2": "KILL",
+      "K3": "KILL",
+      "K3_raw_rule_kill": true,
+      "K5": "DROP_COMPONENT_8",
+      "K6": "COUPLING_WEAK_SENSITIVITY_ONLY",
+      "K7": "DROP_DELEGATE_EARLY_CLAIM",
+      "reporting_only_realistic_le_60min": {
+        "K1": "KILL",
+        "K2": "KILL",
+        "K3": "KILL",
+        "K3_raw_rule_kill": true,
+        "K5": "DROP_COMPONENT_8",
+        "K6": "COUPLING_WEAK_SENSITIVITY_ONLY",
+        "K7": "DROP_DELEGATE_EARLY_CLAIM",
+        "cells": [
+          "anthropic_1h|11.19",
+          "anthropic_1h|30",
+          "anthropic_1h|5",
+          "anthropic_5m|11.19",
+          "anthropic_5m|30",
+          "anthropic_5m|5",
+          "openai_30m|11.19",
+          "openai_30m|30",
+          "openai_30m|5"
+        ]
+      },
+      "tool_rule": {
+        "tool_share": 0.07604187107737308,
+        "action": "NO_ACTION"
+      },
+      "cells": {
+        "anthropic_5m|5": {
+          "K1": true,
+          "K2": true,
+          "K2_strong": false,
+          "K3": true,
+          "K5": false,
+          "K6": false,
+          "K7": false,
+          "borderline": {
+            "K1": false,
+            "K2": false,
+            "K5": false,
+            "K7": false
+          }
+        },
+        "anthropic_5m|11.19": {
+          "K1": false,
+          "K2": false,
+          "K2_strong": false,
+          "K3": true,
+          "K5": false,
+          "K6": false,
+          "K7": false,
+          "borderline": {
+            "K1": false,
+            "K2": false,
+            "K5": false,
+            "K7": false
+          }
+        },
+        "anthropic_5m|30": {
+          "K1": false,
+          "K2": false,
+          "K2_strong": false,
+          "K3": false,
+          "K5": false,
+          "K6": false,
+          "K7": false,
+          "borderline": {
+            "K1": false,
+            "K2": false,
+            "K5": false,
+            "K7": false
+          }
+        },
+        "anthropic_1h|5": {
+          "K1": false,
+          "K2": false,
+          "K2_strong": false,
+          "K3": false,
+          "K5": false,
+          "K6": false,
+          "K7": false,
+          "borderline": {
+            "K1": false,
+            "K2": false,
+            "K5": false,
+            "K7": false
+          }
+        },
+        "anthropic_1h|11.19": {
+          "K1": false,
+          "K2": false,
+          "K2_strong": false,
+          "K3": false,
+          "K5": false,
+          "K6": false,
+          "K7": false,
+          "borderline": {
+            "K1": false,
+            "K2": false,
+            "K5": false,
+            "K7": false
+          }
+        },
+        "anthropic_1h|30": {
+          "K1": false,
+          "K2": false,
+          "K2_strong": false,
+          "K3": false,
+          "K5": false,
+          "K6": false,
+          "K7": false,
+          "borderline": {
+            "K1": false,
+            "K2": false,
+            "K5": false,
+            "K7": false
+          }
+        },
+        "openai_30m|5": {
+          "K1": false,
+          "K2": false,
+          "K2_strong": false,
+          "K3": false,
+          "K5": false,
+          "K6": false,
+          "K7": false,
+          "borderline": {
+            "K1": false,
+            "K2": false,
+            "K5": false,
+            "K7": false
+          }
+        },
+        "openai_30m|11.19": {
+          "K1": false,
+          "K2": false,
+          "K2_strong": false,
+          "K3": false,
+          "K5": false,
+          "K6": false,
+          "K7": false,
+          "borderline": {
+            "K1": false,
+            "K2": false,
+            "K5": false,
+            "K7": false
+          }
+        },
+        "openai_30m|30": {
+          "K1": false,
+          "K2": false,
+          "K2_strong": false,
+          "K3": false,
+          "K5": false,
+          "K6": false,
+          "K7": false,
+          "borderline": {
+            "K1": false,
+            "K2": false,
+            "K5": false,
+            "K7": false
+          }
+        }
+      },
+      "profile": "dgx_spark",
+      "arm": "thermal_on",
+      "K2_status": "FINAL (provider check confirmed via OpenRouter with pinned providers, D9; post-hoc amendments D9-A1 message-level GPT extend, D9-A2 extra GPT delays)"
+    }
+  },
+  "aggregation": "pooled ratio (sum of numerators / sum of denominators over the sample)",
+  "K2_provider_check": {
+    "status": "FINAL",
+    "check": "CONFIRMED",
+    "reason": "TTL semantics and cache prices confirmed for all three presets; pings bill anthropic 1.0, openai 10.6 output tokens instead of 0, which can only lower the ping saving",
+    "ping_output_tokens_deviation": {
+      "anthropic": 1.0,
+      "openai": 10.575757575757576
+    },
+    "amendments": [
+      "A2 openai_30m O_hit600 (hit) = CONFIRMED",
+      "A2 openai_30m O_hit1740 (hit) = CONFIRMED",
+      "A2 openai_30m O_miss2400 (miss) = CONFIRMED",
+      "openai_30m.extend_reads_prefix replaced by message-level test (A1)"
+    ],
+    "status_line": "FINAL (provider check confirmed via OpenRouter with pinned providers, D9; post-hoc amendments D9-A1 message-level GPT extend, D9-A2 extra GPT delays)"
+  }
+}

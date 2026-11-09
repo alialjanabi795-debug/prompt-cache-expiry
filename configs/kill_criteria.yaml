@@ -1,0 +1,132 @@
+# =================================================================================================
+# PRE-REGISTERED KILL CRITERIA - Phase 0
+# Frozen BEFORE any simulation on real trajectories. The SHA-256 of this file is recorded in
+# configs/kill_criteria.lock.json and verified by every sweep/analysis script; a mismatch aborts.
+# Changes after freezing are not allowed. Any deviation from the protocol must be logged in
+# docs/deviations.md with a reason, and reported in the paper.
+# =================================================================================================
+version: 1
+frozen_on: "2026-10-19"
+
+data:
+  primary_dataset: nebius/SWE-rebench-openhands-trajectories
+  primary_file_sha256: 14048dd1fcd22ce094b6e85f8a38f223a9ef1327031aaaad052804870212efa1
+  sample:
+    method: uniform random rows without replacement (numpy default_rng)
+    n: 2000
+    seed: 20261019
+    exclusions: none     # resolved and unresolved, all exit statuses (submit / max-iter / stuck)
+    step_cap: none       # trajectories used as recorded (OpenHands run cap = 100 iterations)
+  tokenizer: Qwen/Qwen3.5-9B (tokenizer.json), Qwen chat-template rendering (src/cache_delegation/loader.py)
+  robustness_dataset: SWE-bench/SWE-smith-trajectories, split "tool", shard 00004 (reported, not used for verdicts)
+
+primary_config:
+  device_profile: weak_edge          # configs/device.yaml
+  device_mode: dynamic               # nominal arm is used only for K6
+  network: average                   # good / weak are sensitivity only
+  context_strategy: full
+  presets: [anthropic_5m, anthropic_1h, openai_30m]
+  local_decode_tps_grid: [5, 11, 30] # prefill = prefill_decode_ratio x decode (device.yaml)
+  keystep_long_read_tokens: 1000     # "long" Read/Search = observation >= 1000 Qwen tokens
+  tool_time_seed: 0
+  policy_seed: 0
+  pings:
+    max_tokens: 0                    # pre-warm style request: prefill only, zero output billed
+    safety_margin_s: 10
+    schedule: offline per-gap optimum over {none, refresh chain, extend chain (DP)}
+  device_parameters_note: >-
+    Device parameters may be replaced only by the mechanical fit of docs/calibration.md, done
+    before the sweep and logged in docs/deviations.md. Thresholds below never change.
+
+aggregation:
+  unit: trajectory
+  estimator: pooled ratio (sum of numerators / sum of denominators over the sample)
+  ci: 95% percentile bootstrap over trajectories, B = 2000, seed = 7
+  verdict_rule: >-
+    Verdicts use the point estimate. If the 95% CI straddles a threshold the verdict is kept and
+    annotated BORDERLINE.
+  cell: one (preset, local_decode_tps) combination of the primary config
+
+robustness_rule_K4:
+  statement: >-
+    A finding HOLDS only if, for every local_decode_tps in {5, 11, 30}, it holds in at least 2 of
+    the 3 presets. Applied uniformly to K1, K2 (and its STRONG level), K3, K5, K6 and K7.
+    "Holds" means: K1 share >= 0.15; K2 saving >= 0.15 (STRONG: >= 0.25); K3 rankings differ;
+    K5 cold share >= 0.20; K6 |delta| >= 10 pp; K7 improvement >= 0.10. A finding that does not
+    hold triggers the action listed for that criterion.
+
+criteria:
+  K1:
+    question: Is cold-cache re-prefill a material part of the delegation bill?
+    policy: keystep
+    metric: >-
+      reprefill_share = sum over KeyStep delegations of (usd_c - usd_c_inf_ttl) / sum over KeyStep
+      delegations of usd_c, where usd_c is accounting (c) and usd_c_inf_ttl is the same request
+      priced as if no cache entry had ever expired (identical request history).
+    threshold: 0.15
+    action_if_not_holding: KILL
+
+  K2:
+    question: Do optimal keep-warm pings save money net of their own cost?
+    policy: keystep
+    metric: >-
+      ping_net_saving = (C_noping - C_ping) / C_noping, where C = total cloud cost (c) of all
+      KeyStep requests, C_ping includes the cost of every ping, and the ping schedule is the
+      offline per-gap optimum (src/cache_delegation/pings.py, mode "best").
+    threshold: 0.15
+    strong_threshold: 0.25
+    action_if_not_holding: KILL
+    label_if_strong: STRONG
+
+  K3:
+    question: Does cache-aware pricing change which policy looks cheapest?
+    policies: [random_0.2, random_0.4, keystep, sticky2_keystep, all_cloud]
+    metric: >-
+      Order the five policies by total calls (a) and by total cost (c) (ascending; ties broken by
+      the list order above). Per cell: "differs" if the two orders are not identical.
+    kill_rule_raw: KILL if the orders are identical in all three presets (at any decode tps).
+    action_if_not_holding: KILL        # K4 version: must differ in >= 2 of 3 presets at every tps
+
+  K5:
+    question: Is the cloud cache cold often enough to justify cache-state-dependent context?
+    policy: keystep
+    metric: >-
+      cold_share = number of cold KeyStep delegations / number of KeyStep delegations that have a
+      prior cloud request in the same session (non-compulsory). A delegation is cold iff its live
+      cache hit is smaller than its infinite-TTL hit (a previously cached prefix had expired).
+    threshold: 0.20
+    action_if_not_holding: DROP_COMPONENT_8
+
+  K6:
+    question: Does weak hardware raise cloud cost indirectly (coupling)?
+    policy: keystep
+    metric: >-
+      delta_pp = 100 * (cold_share_dynamic - cold_share_nominal), same trajectories, same
+      decisions, same tool-time draws; nominal = constant prefill/decode throughput, no thermal
+      throttling, no KV eviction by memory pressure. Also reported: number of delegations cold in
+      the dynamic arm but warm in the nominal arm ("cold only because local steps slowed down").
+    threshold_abs_pp: 10
+    action_if_not_holding: COUPLING_WEAK_SENSITIVITY_ONLY
+
+  K7:
+    question: Does delegating 1-3 steps earlier when the local KV was evicted pay off?
+    policies: [early1_keystep, early2_keystep, early3_keystep]
+    baseline: keystep
+    trigger: local KV evicted and the next local step would re-prefill >= 8000 tokens
+    metric: >-
+      J(policy) = 0.5 * U(policy) / U(keystep) + 0.5 * T(policy) / T(keystep), where U = cloud
+      cost (c) + edge cost and T = total wall-clock time, both summed over trajectories;
+      improvement = 1 - min over early1/2/3 of J.
+    threshold: 0.10
+    action_if_not_holding: DROP_DELEGATE_EARLY_CLAIM
+
+  tool_rule:
+    question: Should "run tool on edge" become a Phase-1 action?
+    policy: keystep
+    cell: {preset: anthropic_5m, local_decode_tps: 11}
+    metric: >-
+      tool_share = sum of tool seconds inside inter-delegation gaps / sum of gap seconds (gap =
+      start-to-start interval between consecutive KeyStep delegations), weak_edge dynamic,
+      average network.
+    threshold: 0.40
+    action_if_above: ADD_RUN_TOOL_ON_EDGE

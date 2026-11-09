@@ -1,0 +1,22 @@
+[
+  {
+    "name": "openhands",
+    "source_file": "data/raw/openhands/trajectories.parquet",
+    "rows_in_file": 67074,
+    "sampled": 2000,
+    "kept": 2000,
+    "seed": 20261019,
+    "file_sha256": "14048dd1fcd22ce094b6e85f8a38f223a9ef1327031aaaad052804870212efa1",
+    "seconds": 262.6
+  },
+  {
+    "name": "swesmith",
+    "source_file": "data/raw/swesmith/tool-00004-of-00008.parquet",
+    "rows_in_file": 3012,
+    "sampled": 1000,
+    "kept": 1000,
+    "seed": 20261019,
+    "file_sha256": "e41ffbd3f9d1571917ac5b9f4d0108ded4799d9776f597a054203467135a5715",
+    "seconds": 31.0
+  }
+]

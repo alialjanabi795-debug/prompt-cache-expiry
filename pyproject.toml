@@ -1,0 +1,29 @@
+[project]
+name = "prompt-cache-expiry"
+version = "0.1.0"
+description = "Replay study of prompt-cache expiry and cloud cost in edge-cloud delegation for coding agents"
+requires-python = ">=3.11"
+dependencies = ["numpy", "pandas", "pyarrow", "pyyaml", "tokenizers", "matplotlib"]
+
+[project.optional-dependencies]
+dev = ["pytest", "ruff"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+src = ["src", "tests", "scripts"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "SIM", "RUF"]
+ignore = ["RUF001", "RUF002", "RUF003"]

@@ -1,0 +1,12 @@
+{"cmd": "$CALIB_REPOS/venv_sqlglot/bin/python -m pytest -q -x -p no:cacheprovider tests/test_transpile.py", "cwd": "sqlglot", "rc": 0, "wall_s": 1.51, "peak_rss_mb": 71.3}
+{"cmd": "$CALIB_REPOS/venv_sqlglot/bin/python -m pytest -q -p no:cacheprovider tests", "cwd": "sqlglot", "rc": 2, "wall_s": 1.36, "peak_rss_mb": 68.5}
+{"cmd": "$CALIB_REPOS/venv_pyupgrade/bin/python -m pytest -q -p no:cacheprovider tests/features/fstrings_test.py", "cwd": "pyupgrade", "rc": 0, "wall_s": 0.3, "peak_rss_mb": 29.4}
+{"cmd": "$CALIB_REPOS/venv_pyupgrade/bin/python -m pytest -q -p no:cacheprovider tests", "cwd": "pyupgrade", "rc": 0, "wall_s": 1.46, "peak_rss_mb": 41.8}
+{"cmd": "$CALIB_REPOS/venv_pyflakes/bin/python -m pytest -q -p no:cacheprovider pyflakes/test/test_imports.py", "cwd": "pyflakes", "rc": 0, "wall_s": 0.45, "peak_rss_mb": 33.2}
+{"cmd": "$CALIB_REPOS/venv_pyflakes/bin/python -m pytest -q -p no:cacheprovider pyflakes/test", "cwd": "pyflakes", "rc": 0, "wall_s": 1.77, "peak_rss_mb": 48.6}
+{"cmd": "$CALIB_REPOS/venv_faker/bin/python -m pytest -q -p no:cacheprovider tests/test_factory.py", "cwd": "faker", "rc": 0, "wall_s": 1.57, "peak_rss_mb": 97.6}
+{"cmd": "$CALIB_REPOS/venv_faker/bin/python -m pytest -q -p no:cacheprovider tests", "cwd": "faker", "rc": 2, "wall_s": 6.33, "peak_rss_mb": 103.7}
+{"cmd": "$CALIB_REPOS/venv_sqllineage/bin/python -m pytest -q -p no:cacheprovider tests", "cwd": "sqllineage", "rc": 0, "wall_s": 34.61, "peak_rss_mb": 550.8}
+{"cmd": "$CALIB_REPOS/venv_dask/bin/python -m pytest -q -p no:cacheprovider --timeout 300 -p no:xdist dask/dataframe/tests/test_shuffle.py", "cwd": "dask", "rc": 2, "wall_s": 1.37, "peak_rss_mb": 195.6}
+{"cmd": "$CALIB_REPOS/venv_dask/bin/python -m pytest -q -p no:cacheprovider --timeout 300 -p no:xdist dask/array/tests/test_array_core.py", "cwd": "dask", "rc": 1, "wall_s": 11.2, "peak_rss_mb": 244.3}
+{"cmd": "$CALIB_REPOS/venv_dask/bin/python -m pytest -q -p no:cacheprovider --timeout 300 -p no:xdist dask/dataframe/tests/test_groupby.py", "cwd": "dask", "rc": 0, "wall_s": 446.68, "peak_rss_mb": 274.1}

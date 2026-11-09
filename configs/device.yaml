@@ -1,0 +1,152 @@
+# Device model, calibrated 2026-10-19 (deviation D1, results/calib/). Tags:
+#   MEASURED  = fitted/observed on Qwen3.5-9B Q4_K_M, llama.cpp (build 33d6135), 4-vCPU container
+#   DOC       = derived from the model config / llama.cpp allocation log
+#   ASSUMPTION = not measurable here (no thermal sensors in the VM, no real weak device)
+#
+# Throughput shape (MEASURED, 60-min agent replay to 53k context, R^2 0.999 / 0.98):
+#   prefill per-token cost doubles at 24.6k context, decode at 36.4k; prefill/decode = 11.7.
+#   Absolute decode speed is swept (5, 11, 30 tok/s); this container decodes 3.65 tok/s at ctx 0.
+# Memory (MEASURED): KV reserved and touched for all of n_ctx at start-up; up to 32 context
+#   checkpoints x 0.049 GiB; weights = 5.29 GiB page cache (mmap, reclaimable); anonymous overhead
+#   0.26 GiB. Under memory shortage the KV is kept; the kernel drops weight pages (thrashing:
+#   decode 1.41 -> 0.041 tok/s at 76% of weights resident) - see MemoryParams in config.py.
+# Tool memory (MEASURED, 12 pytest runs on 6 repos from the sample): peak RSS median 84 MB,
+#   p90 271 MB, max 551 MB. test_validate uses the p90.
+
+defaults:
+  kv_bytes_per_token: 32768          # DOC: 2 x 8 full-attention layers x 4 KV heads x 256 x 2 B
+  prefill_decode_ratio: 11.68        # MEASURED
+  prefill_ctx_double_tokens: 24631   # MEASURED
+  decode_ctx_double_tokens: 36408    # MEASURED
+  tool_mem_gb:
+    write_edit: 0.05                 # ASSUMPTION
+    read_search: 0.05                # ASSUMPTION
+    navigate: 0.05                   # ASSUMPTION
+    wait: 0.0
+    diagnose_reproduce: 0.10         # ASSUMPTION (python scripts, ~ small pytest runs)
+    test_validate: 0.27              # MEASURED p90 of real pytest peak RSS
+  memory:
+    weights_gb: 5.29                 # MEASURED
+    weights_mmap: true
+    runtime_overhead_gb: 0.26        # MEASURED
+    checkpoint_gb: 0.049             # MEASURED
+    max_checkpoints: 32              # llama.cpp default
+    refault_mb_s: 54.0               # MEASURED (case D, steady thrashing)
+    refault_seq_mb_s: 1200.0         # MEASURED lower bound (cases B/B2/C: no visible penalty)
+    ubatch_tokens: 512
+    reload_s: 30.0                   # MEASURED (model load to ready, warm storage)
+    swap_gb: 0.0
+  thermal:                           # ASSUMPTION (fanless device; not measurable in a VM)
+    enabled: true
+    tau_s: 180.0
+    onset: 0.30
+    min_prefill_factor: 0.50
+    min_decode_factor: 0.75
+    min_tool_factor: 0.70
+    tool_heat: 0.6
+    idle_heat: 0.05
+  fault:                             # ASSUMPTION (no runtime failure in 49 calibration steps)
+    enabled: true
+    p_base: 0.002
+    p_max: 0.25
+    len50_tokens: 48000
+    scale_tokens: 8000
+    wasted_fraction: 0.5
+  power:                             # ASSUMPTION
+    compute_w: 10.0
+    tool_w: 6.0
+    idle_w: 2.0
+
+profiles:
+  # ---------------------------------------------------------------------------------------------
+  # PROPOSED primary weak profile (pending approval) = the measured configuration on a 12 GB-class
+  # fanless device: fp16 KV, n_ctx 64k, 32 checkpoints. Footprint 5.29 + 2.0 + 1.57 + 0.26 =
+  # 9.1 GiB of 10 GiB usable; real tools (p99 0.55 GB) at most drop a few weight pages
+  # (no OOM, KV kept). Steps beyond 64k context fall back to the edge.
+  # (q8_0 KV was considered: it saves 1 GiB but makes CPU prefill 2.2x slower at 8k depth.)
+  weak_edge:
+    decode_tps: 11.0
+    max_ctx_tokens: 65536
+    tool_speed_factor: 2.5           # ASSUMPTION
+    memory:
+      ram_usable_gb: 10.0            # ASSUMPTION: 12 GB device minus OS/background
+  # Same device with q8_0 KV and 8 checkpoints (7.0 GiB footprint) - prefill much slower at depth.
+  weak12_q8:
+    decode_tps: 11.0
+    kv_bytes_per_token: 17408        # DOC: q8_0 = 34 B per 32 values
+    max_ctx_tokens: 65536
+    tool_speed_factor: 2.5
+    prefill_ctx_double_tokens: 4510  # MEASURED (llama-bench q8_0 KV at depth 0/8k/16k)
+    memory:
+      ram_usable_gb: 10.0
+      max_checkpoints: 8
+  # As measured (fp16 KV, 32 checkpoints) on a 12 GB-class device: footprint 9.1 GiB of 10.
+  weak12_fp16:
+    decode_tps: 11.0
+    max_ctx_tokens: 65536
+    tool_speed_factor: 2.5
+    memory:
+      ram_usable_gb: 10.0
+  # 8 GB-class device with the measured configuration: CANNOT hold the stack (anon 3.8 GiB +
+  # weights 5.3 GiB > 6.5 GiB usable) -> permanent thrashing. Kept to show the failure mode.
+  weak8_fp16:
+    decode_tps: 11.0
+    max_ctx_tokens: 65536
+    tool_speed_factor: 2.5
+    memory:
+      ram_usable_gb: 6.5
+  # 8 GB-class device made to fit: q8_0 KV, n_ctx 16k, 4 checkpoints (6.0 of 6.5 GiB). Only the
+  # first ~10 steps of a median trajectory fit in 16k; later local steps fall back to the edge.
+  weak8_q8_16k:
+    decode_tps: 11.0
+    kv_bytes_per_token: 17408
+    prefill_ctx_double_tokens: 4510  # MEASURED (q8_0 KV)
+    max_ctx_tokens: 16384
+    tool_speed_factor: 2.5
+    memory:
+      ram_usable_gb: 6.5
+      max_checkpoints: 4
+
+  laptop_16gb:
+    decode_tps: 11.0
+    prefill_decode_ratio: 25.0       # ASSUMPTION (GPU prefill)
+    max_ctx_tokens: 131072
+    tool_speed_factor: 1.3
+    memory:
+      ram_usable_gb: 13.0
+    thermal:
+      tau_s: 300.0
+      onset: 0.5
+      min_prefill_factor: 0.8
+      min_decode_factor: 0.9
+      min_tool_factor: 0.9
+      tool_heat: 0.5
+      idle_heat: 0.05
+    fault:
+      p_base: 0.0005
+      p_max: 0.05
+      len50_tokens: 120000
+      scale_tokens: 15000
+    power:
+      compute_w: 25.0
+      tool_w: 15.0
+      idle_w: 4.0
+
+  dgx_spark:
+    _note: EdgeWise reference workstation (DOC 11.19 tok/s, 57 GiB KV); strong-device control.
+    decode_tps: 11.19
+    prefill_decode_ratio: 200.0
+    prefill_ctx_double_tokens: 120000
+    decode_ctx_double_tokens: 200000
+    max_ctx_tokens: 262144
+    tool_speed_factor: 1.0
+    memory:
+      ram_usable_gb: 100.0
+    thermal:
+      enabled: false
+    fault:
+      enabled: false
+    power:
+      compute_w: 120.0
+      tool_w: 60.0
+      idle_w: 40.0

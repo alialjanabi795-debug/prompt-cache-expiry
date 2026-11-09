@@ -1,0 +1,1592 @@
+{
+  "run_at": "2026-10-20T19:54:54Z",
+  "backend": "openrouter",
+  "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+  "models": {
+    "anthropic": {
+      "slug": "anthropic/claude-opus-4.8",
+      "order": "anthropic",
+      "provider_name": "Anthropic",
+      "ping_max_tokens": 1
+    },
+    "openai": {
+      "slug": "openai/gpt-5.6-sol",
+      "order": "openai",
+      "provider_name": "OpenAI",
+      "ping_max_tokens": 16
+    }
+  },
+  "provider_routing": {
+    "anthropic": {
+      "order": [
+        "anthropic"
+      ],
+      "allow_fallbacks": false
+    },
+    "openai": {
+      "order": [
+        "openai"
+      ],
+      "allow_fallbacks": false
+    }
+  },
+  "max_tokens_0_probe": "accepted but ignored by OpenRouter (full generation billed); smallest honoured value: anthropic 1, openai 16",
+  "plan": {
+    "C5_extend": {
+      "provider": "anthropic",
+      "ttl": "5m",
+      "repeats": 3,
+      "steps": [
+        [
+          0,
+          "write",
+          "write"
+        ],
+        [
+          15,
+          "ping",
+          "hit"
+        ],
+        [
+          30,
+          "extend",
+          "extend"
+        ],
+        [
+          45,
+          "generate",
+          "hit"
+        ]
+      ]
+    },
+    "C5_hit270": {
+      "provider": "anthropic",
+      "ttl": "5m",
+      "repeats": 6,
+      "steps": [
+        [
+          0,
+          "write",
+          "write"
+        ],
+        [
+          270,
+          "read",
+          "hit"
+        ]
+      ]
+    },
+    "C5_miss330": {
+      "provider": "anthropic",
+      "ttl": "5m",
+      "repeats": 6,
+      "steps": [
+        [
+          0,
+          "write",
+          "write"
+        ],
+        [
+          330,
+          "read",
+          "miss"
+        ]
+      ]
+    },
+    "C5_refresh": {
+      "provider": "anthropic",
+      "ttl": "5m",
+      "repeats": 6,
+      "steps": [
+        [
+          0,
+          "write",
+          "write"
+        ],
+        [
+          240,
+          "read",
+          "hit"
+        ],
+        [
+          420,
+          "read",
+          "hit"
+        ]
+      ]
+    },
+    "C5_min1500": {
+      "provider": "anthropic",
+      "ttl": "5m",
+      "repeats": 2,
+      "steps": [
+        [
+          0,
+          "write",
+          "write"
+        ],
+        [
+          20,
+          "read",
+          "hit"
+        ]
+      ]
+    },
+    "C1h_hit3300": {
+      "provider": "anthropic",
+      "ttl": "1h",
+      "repeats": 5,
+      "steps": [
+        [
+          0,
+          "write",
+          "write"
+        ],
+        [
+          3300,
+          "read",
+          "hit"
+        ]
+      ]
+    },
+    "C1h_miss3900": {
+      "provider": "anthropic",
+      "ttl": "1h",
+      "repeats": 5,
+      "steps": [
+        [
+          0,
+          "write",
+          "write"
+        ],
+        [
+          3900,
+          "read",
+          "miss"
+        ]
+      ]
+    },
+    "C1h_refresh": {
+      "provider": "anthropic",
+      "ttl": "1h",
+      "repeats": 5,
+      "steps": [
+        [
+          0,
+          "write",
+          "write"
+        ],
+        [
+          600,
+          "read",
+          "hit"
+        ],
+        [
+          3900,
+          "read",
+          "hit"
+        ]
+      ]
+    },
+    "O_quick": {
+      "provider": "openai",
+      "ttl": "auto",
+      "repeats": 5,
+      "steps": [
+        [
+          0,
+          "write",
+          "write"
+        ],
+        [
+          20,
+          "read",
+          "hit"
+        ],
+        [
+          300,
+          "read",
+          "hit"
+        ]
+      ]
+    },
+    "O_extend": {
+      "provider": "openai",
+      "ttl": "auto",
+      "repeats": 3,
+      "steps": [
+        [
+          0,
+          "write",
+          "write"
+        ],
+        [
+          20,
+          "extend",
+          "extend"
+        ]
+      ]
+    },
+    "O_hit1500": {
+      "provider": "openai",
+      "ttl": "auto",
+      "repeats": 5,
+      "steps": [
+        [
+          0,
+          "write",
+          "write"
+        ],
+        [
+          1500,
+          "read",
+          "hit"
+        ]
+      ]
+    },
+    "O_miss2100": {
+      "provider": "openai",
+      "ttl": "auto",
+      "repeats": 5,
+      "steps": [
+        [
+          0,
+          "write",
+          "write"
+        ],
+        [
+          2100,
+          "read",
+          "miss"
+        ]
+      ]
+    },
+    "O_refresh": {
+      "provider": "openai",
+      "ttl": "auto",
+      "repeats": 5,
+      "steps": [
+        [
+          0,
+          "write",
+          "write"
+        ],
+        [
+          1200,
+          "read",
+          "hit"
+        ],
+        [
+          2700,
+          "read",
+          "hit"
+        ]
+      ]
+    },
+    "O_extend_msg": {
+      "provider": "openai",
+      "ttl": "auto",
+      "repeats": 5,
+      "steps": [
+        [
+          0,
+          "write",
+          "write"
+        ],
+        [
+          20,
+          "extend",
+          "extend"
+        ]
+      ]
+    },
+    "C5_extend_msg": {
+      "provider": "anthropic",
+      "ttl": "5m",
+      "repeats": 3,
+      "steps": [
+        [
+          0,
+          "write",
+          "write"
+        ],
+        [
+          20,
+          "extend",
+          "extend"
+        ]
+      ]
+    },
+    "O_hit600": {
+      "provider": "openai",
+      "ttl": "auto",
+      "repeats": 4,
+      "steps": [
+        [
+          0,
+          "write",
+          "write"
+        ],
+        [
+          600,
+          "read",
+          "hit"
+        ]
+      ]
+    },
+    "O_hit1740": {
+      "provider": "openai",
+      "ttl": "auto",
+      "repeats": 4,
+      "steps": [
+        [
+          0,
+          "write",
+          "write"
+        ],
+        [
+          1740,
+          "read",
+          "hit"
+        ]
+      ]
+    },
+    "O_miss2400": {
+      "provider": "openai",
+      "ttl": "auto",
+      "repeats": 4,
+      "steps": [
+        [
+          0,
+          "write",
+          "write"
+        ],
+        [
+          2400,
+          "read",
+          "miss"
+        ]
+      ]
+    }
+  },
+  "counts": {
+    "requests": 24,
+    "valid": 23,
+    "wrong_provider": 0,
+    "non_default_tier": 0,
+    "http_error": 0,
+    "budget_skip": 1,
+    "after_invalid_step": 0,
+    "no_generation": 0
+  },
+  "spend": {
+    "run_usd_from_usage": 0.272424,
+    "run_usd_from_generations": 0.272424,
+    "key_usage_before": 4.0198535,
+    "key_usage_after": 4.3916485
+  },
+  "evaluation": {
+    "O_hit1740": {
+      "n": 4,
+      "want": "hit",
+      "hits": 4,
+      "outcomes": {
+        "hit": 4
+      },
+      "status": "CONFIRMED",
+      "detail": [
+        {
+          "prefix": 3427,
+          "cached": 3427,
+          "written": 0,
+          "prompt": 3430,
+          "offset_s": 1740.0
+        },
+        {
+          "prefix": 3426,
+          "cached": 3426,
+          "written": 0,
+          "prompt": 3429,
+          "offset_s": 1740.0
+        },
+        {
+          "prefix": 3426,
+          "cached": 3426,
+          "written": 0,
+          "prompt": 3429,
+          "offset_s": 1740.0
+        },
+        {
+          "prefix": 3427,
+          "cached": 3427,
+          "written": 0,
+          "prompt": 3430,
+          "offset_s": 1740.0
+        }
+      ]
+    },
+    "O_hit600": {
+      "n": 4,
+      "want": "hit",
+      "hits": 4,
+      "outcomes": {
+        "hit": 4
+      },
+      "status": "CONFIRMED",
+      "detail": [
+        {
+          "prefix": 3425,
+          "cached": 3425,
+          "written": 0,
+          "prompt": 3428,
+          "offset_s": 600.0
+        },
+        {
+          "prefix": 3425,
+          "cached": 3425,
+          "written": 0,
+          "prompt": 3428,
+          "offset_s": 600.0
+        },
+        {
+          "prefix": 3425,
+          "cached": 3425,
+          "written": 0,
+          "prompt": 3428,
+          "offset_s": 600.0
+        },
+        {
+          "prefix": 3427,
+          "cached": 3427,
+          "written": 0,
+          "prompt": 3430,
+          "offset_s": 600.0
+        }
+      ]
+    },
+    "O_miss2400": {
+      "n": 3,
+      "want": "miss",
+      "hits": 0,
+      "outcomes": {
+        "miss": 3
+      },
+      "status": "CONFIRMED",
+      "detail": [
+        {
+          "prefix": 3427,
+          "cached": 0,
+          "written": 3427,
+          "prompt": 3430,
+          "offset_s": 2400.0
+        },
+        {
+          "prefix": 3427,
+          "cached": 0,
+          "written": 3427,
+          "prompt": 3430,
+          "offset_s": 2400.0
+        },
+        {
+          "prefix": 3427,
+          "cached": 0,
+          "written": 3427,
+          "prompt": 3430,
+          "offset_s": 2400.0
+        }
+      ]
+    }
+  },
+  "groups": [
+    "O_hit600",
+    "O_hit1740",
+    "O_miss2400"
+  ],
+  "records": [
+    {
+      "group": "O_hit1740",
+      "rep": 0,
+      "step": 0,
+      "label": "write",
+      "expect": "write",
+      "provider": "openai",
+      "ttl": "auto",
+      "blocks": "X",
+      "planned_offset_s": 0,
+      "max_tokens": 16,
+      "status": 200,
+      "t_send": 4.0,
+      "offset_s": 0.0,
+      "latency_s": 1.22,
+      "gen_id": "gen-1792526098-DvqXLbODU6hoZRAea5l6",
+      "resp_provider": "OpenAI",
+      "service_tier": "default",
+      "prompt_tokens": 3430,
+      "completion_tokens": 9,
+      "cached_tokens": 0,
+      "cache_write_tokens": 3427,
+      "cost": 0.017327,
+      "error": null,
+      "generation": {
+        "provider_name": "OpenAI",
+        "native_tokens_prompt": 3430,
+        "native_tokens_cached": 0,
+        "native_tokens_completion": 9,
+        "native_tokens_reasoning": 0,
+        "total_cost": 0.017327,
+        "service_tier": "default",
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "model": "openai/gpt-5.6-sol-20260709",
+        "cache_discount": -0.003427
+      },
+      "valid": true,
+      "discard_reason": null,
+      "price": {
+        "expected_usd": 0.017327000000000002,
+        "billed_usd": 0.017327,
+        "rel_err": -2.002335633377742e-16,
+        "measured_write_mult": 1.2499999999999998
+      }
+    },
+    {
+      "group": "O_hit1740",
+      "rep": 0,
+      "step": 1,
+      "label": "read",
+      "expect": "hit",
+      "provider": "openai",
+      "ttl": "auto",
+      "blocks": "X",
+      "planned_offset_s": 1740,
+      "max_tokens": 16,
+      "status": 200,
+      "t_send": 1744.0,
+      "offset_s": 1740.0,
+      "latency_s": 1.67,
+      "gen_id": "gen-1792527838-S2VfnG7PIYaGjTft6UIq",
+      "resp_provider": "OpenAI",
+      "service_tier": "default",
+      "prompt_tokens": 3430,
+      "completion_tokens": 9,
+      "cached_tokens": 3427,
+      "cache_write_tokens": 0,
+      "cost": 0.0015628,
+      "error": null,
+      "generation": {
+        "provider_name": "OpenAI",
+        "native_tokens_prompt": 3430,
+        "native_tokens_cached": 3427,
+        "native_tokens_completion": 9,
+        "native_tokens_reasoning": 0,
+        "total_cost": 0.0015628,
+        "service_tier": "default",
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "model": "openai/gpt-5.6-sol-20260709",
+        "cache_discount": 0.0123372
+      },
+      "valid": true,
+      "discard_reason": null,
+      "price": {
+        "expected_usd": 0.0015628000000000003,
+        "billed_usd": 0.0015628,
+        "rel_err": -1.3875123784047918e-16,
+        "measured_read_mult": 0.09999999999999999
+      },
+      "outcome": "hit"
+    },
+    {
+      "group": "O_hit1740",
+      "rep": 1,
+      "step": 0,
+      "label": "write",
+      "expect": "write",
+      "provider": "openai",
+      "ttl": "auto",
+      "blocks": "X",
+      "planned_offset_s": 0,
+      "max_tokens": 16,
+      "status": 200,
+      "t_send": 18.0,
+      "offset_s": 0.0,
+      "latency_s": 1.19,
+      "gen_id": "gen-1792526112-vAarTuHSdK0L5r5t1tLk",
+      "resp_provider": "OpenAI",
+      "service_tier": "default",
+      "prompt_tokens": 3429,
+      "completion_tokens": 10,
+      "cached_tokens": 0,
+      "cache_write_tokens": 3426,
+      "cost": 0.017342,
+      "error": null,
+      "generation": {
+        "provider_name": "OpenAI",
+        "native_tokens_prompt": 3429,
+        "native_tokens_cached": 0,
+        "native_tokens_completion": 10,
+        "native_tokens_reasoning": 0,
+        "total_cost": 0.017342,
+        "service_tier": "default",
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "model": "openai/gpt-5.6-sol-20260709",
+        "cache_discount": -0.003426
+      },
+      "valid": true,
+      "discard_reason": null,
+      "price": {
+        "expected_usd": 0.017342,
+        "billed_usd": 0.017342,
+        "rel_err": 0.0,
+        "measured_write_mult": 1.25
+      }
+    },
+    {
+      "group": "O_hit1740",
+      "rep": 1,
+      "step": 1,
+      "label": "read",
+      "expect": "hit",
+      "provider": "openai",
+      "ttl": "auto",
+      "blocks": "X",
+      "planned_offset_s": 1740,
+      "max_tokens": 16,
+      "status": 200,
+      "t_send": 1758.0,
+      "offset_s": 1740.0,
+      "latency_s": 1.24,
+      "gen_id": "gen-1792527852-k3ico89uEp8PQyL6QKja",
+      "resp_provider": "OpenAI",
+      "service_tier": "default",
+      "prompt_tokens": 3429,
+      "completion_tokens": 9,
+      "cached_tokens": 3426,
+      "cache_write_tokens": 0,
+      "cost": 0.0015624,
+      "error": null,
+      "generation": {
+        "provider_name": "OpenAI",
+        "native_tokens_prompt": 3429,
+        "native_tokens_cached": 3426,
+        "native_tokens_completion": 9,
+        "native_tokens_reasoning": 0,
+        "total_cost": 0.0015624,
+        "service_tier": "default",
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "model": "openai/gpt-5.6-sol-20260709",
+        "cache_discount": 0.0123336
+      },
+      "valid": true,
+      "discard_reason": null,
+      "price": {
+        "expected_usd": 0.0015624000000000002,
+        "billed_usd": 0.0015624,
+        "rel_err": -1.3878676043081213e-16,
+        "measured_read_mult": 0.1
+      },
+      "outcome": "hit"
+    },
+    {
+      "group": "O_hit1740",
+      "rep": 2,
+      "step": 0,
+      "label": "write",
+      "expect": "write",
+      "provider": "openai",
+      "ttl": "auto",
+      "blocks": "X",
+      "planned_offset_s": 0,
+      "max_tokens": 16,
+      "status": 200,
+      "t_send": 6.0,
+      "offset_s": 0.0,
+      "latency_s": 1.19,
+      "gen_id": "gen-1792526100-hKQcJ7Dc8e0vHkDGVMAF",
+      "resp_provider": "OpenAI",
+      "service_tier": "default",
+      "prompt_tokens": 3429,
+      "completion_tokens": 9,
+      "cached_tokens": 0,
+      "cache_write_tokens": 3426,
+      "cost": 0.017322,
+      "error": null,
+      "generation": {
+        "provider_name": "OpenAI",
+        "native_tokens_prompt": 3429,
+        "native_tokens_cached": 0,
+        "native_tokens_completion": 9,
+        "native_tokens_reasoning": 0,
+        "total_cost": 0.017322,
+        "service_tier": "default",
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "model": "openai/gpt-5.6-sol-20260709",
+        "cache_discount": -0.003426
+      },
+      "valid": true,
+      "discard_reason": null,
+      "price": {
+        "expected_usd": 0.017322,
+        "billed_usd": 0.017322,
+        "rel_err": 0.0,
+        "measured_write_mult": 1.25
+      }
+    },
+    {
+      "group": "O_hit1740",
+      "rep": 2,
+      "step": 1,
+      "label": "read",
+      "expect": "hit",
+      "provider": "openai",
+      "ttl": "auto",
+      "blocks": "X",
+      "planned_offset_s": 1740,
+      "max_tokens": 16,
+      "status": 200,
+      "t_send": 1746.0,
+      "offset_s": 1740.0,
+      "latency_s": 1.88,
+      "gen_id": "gen-1792527840-Rm4Y77hMTGyRfLctiHLv",
+      "resp_provider": "OpenAI",
+      "service_tier": "default",
+      "prompt_tokens": 3429,
+      "completion_tokens": 9,
+      "cached_tokens": 3426,
+      "cache_write_tokens": 0,
+      "cost": 0.0015624,
+      "error": null,
+      "generation": {
+        "provider_name": "OpenAI",
+        "native_tokens_prompt": 3429,
+        "native_tokens_cached": 3426,
+        "native_tokens_completion": 9,
+        "native_tokens_reasoning": 0,
+        "total_cost": 0.0015624,
+        "service_tier": "default",
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "model": "openai/gpt-5.6-sol-20260709",
+        "cache_discount": 0.0123336
+      },
+      "valid": true,
+      "discard_reason": null,
+      "price": {
+        "expected_usd": 0.0015624000000000002,
+        "billed_usd": 0.0015624,
+        "rel_err": -1.3878676043081213e-16,
+        "measured_read_mult": 0.1
+      },
+      "outcome": "hit"
+    },
+    {
+      "group": "O_hit1740",
+      "rep": 3,
+      "step": 0,
+      "label": "write",
+      "expect": "write",
+      "provider": "openai",
+      "ttl": "auto",
+      "blocks": "X",
+      "planned_offset_s": 0,
+      "max_tokens": 16,
+      "status": 200,
+      "t_send": 22.0,
+      "offset_s": 0.0,
+      "latency_s": 1.31,
+      "gen_id": "gen-1792526116-r4xR2e5fF0crGqXN5LHe",
+      "resp_provider": "OpenAI",
+      "service_tier": "default",
+      "prompt_tokens": 3430,
+      "completion_tokens": 9,
+      "cached_tokens": 0,
+      "cache_write_tokens": 3427,
+      "cost": 0.017327,
+      "error": null,
+      "generation": {
+        "provider_name": "OpenAI",
+        "native_tokens_prompt": 3430,
+        "native_tokens_cached": 0,
+        "native_tokens_completion": 9,
+        "native_tokens_reasoning": 0,
+        "total_cost": 0.017327,
+        "service_tier": "default",
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "model": "openai/gpt-5.6-sol-20260709",
+        "cache_discount": -0.003427
+      },
+      "valid": true,
+      "discard_reason": null,
+      "price": {
+        "expected_usd": 0.017327000000000002,
+        "billed_usd": 0.017327,
+        "rel_err": -2.002335633377742e-16,
+        "measured_write_mult": 1.2499999999999998
+      }
+    },
+    {
+      "group": "O_hit1740",
+      "rep": 3,
+      "step": 1,
+      "label": "read",
+      "expect": "hit",
+      "provider": "openai",
+      "ttl": "auto",
+      "blocks": "X",
+      "planned_offset_s": 1740,
+      "max_tokens": 16,
+      "status": 200,
+      "t_send": 1762.0,
+      "offset_s": 1740.0,
+      "latency_s": 1.9,
+      "gen_id": "gen-1792527856-CRhoHzscC7cjJ3wKercW",
+      "resp_provider": "OpenAI",
+      "service_tier": "default",
+      "prompt_tokens": 3430,
+      "completion_tokens": 10,
+      "cached_tokens": 3427,
+      "cache_write_tokens": 0,
+      "cost": 0.0015828,
+      "error": null,
+      "generation": {
+        "provider_name": "OpenAI",
+        "native_tokens_prompt": 3430,
+        "native_tokens_cached": 3427,
+        "native_tokens_completion": 10,
+        "native_tokens_reasoning": 0,
+        "total_cost": 0.0015828,
+        "service_tier": "default",
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "model": "openai/gpt-5.6-sol-20260709",
+        "cache_discount": 0.0123372
+      },
+      "valid": true,
+      "discard_reason": null,
+      "price": {
+        "expected_usd": 0.0015828000000000003,
+        "billed_usd": 0.0015828,
+        "rel_err": -1.3699800006134752e-16,
+        "measured_read_mult": 0.09999999999999999
+      },
+      "outcome": "hit"
+    },
+    {
+      "group": "O_hit600",
+      "rep": 0,
+      "step": 0,
+      "label": "write",
+      "expect": "write",
+      "provider": "openai",
+      "ttl": "auto",
+      "blocks": "X",
+      "planned_offset_s": 0,
+      "max_tokens": 16,
+      "status": 200,
+      "t_send": 12.0,
+      "offset_s": 0.0,
+      "latency_s": 1.17,
+      "gen_id": "gen-1792526106-23r4QsPYaUqDUjvCbXqR",
+      "resp_provider": "OpenAI",
+      "service_tier": "default",
+      "prompt_tokens": 3428,
+      "completion_tokens": 9,
+      "cached_tokens": 0,
+      "cache_write_tokens": 3425,
+      "cost": 0.017317,
+      "error": null,
+      "generation": {
+        "provider_name": "OpenAI",
+        "native_tokens_prompt": 3428,
+        "native_tokens_cached": 0,
+        "native_tokens_completion": 9,
+        "native_tokens_reasoning": 0,
+        "total_cost": 0.017317,
+        "service_tier": "default",
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "model": "openai/gpt-5.6-sol-20260709",
+        "cache_discount": -0.003425
+      },
+      "valid": true,
+      "discard_reason": null,
+      "price": {
+        "expected_usd": 0.017317000000000003,
+        "billed_usd": 0.017317,
+        "rel_err": -2.0034919165869455e-16,
+        "measured_write_mult": 1.2499999999999998
+      }
+    },
+    {
+      "group": "O_hit600",
+      "rep": 0,
+      "step": 1,
+      "label": "read",
+      "expect": "hit",
+      "provider": "openai",
+      "ttl": "auto",
+      "blocks": "X",
+      "planned_offset_s": 600,
+      "max_tokens": 16,
+      "status": 200,
+      "t_send": 612.0,
+      "offset_s": 600.0,
+      "latency_s": 1.37,
+      "gen_id": "gen-1792526706-F82zT7cGMi3X6jXzLRab",
+      "resp_provider": "OpenAI",
+      "service_tier": "default",
+      "prompt_tokens": 3428,
+      "completion_tokens": 9,
+      "cached_tokens": 3425,
+      "cache_write_tokens": 0,
+      "cost": 0.001562,
+      "error": null,
+      "generation": {
+        "provider_name": "OpenAI",
+        "native_tokens_prompt": 3428,
+        "native_tokens_cached": 3425,
+        "native_tokens_completion": 9,
+        "native_tokens_reasoning": 0,
+        "total_cost": 0.001562,
+        "service_tier": "default",
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "model": "openai/gpt-5.6-sol-20260709",
+        "cache_discount": 0.01233
+      },
+      "valid": true,
+      "discard_reason": null,
+      "price": {
+        "expected_usd": 0.001562,
+        "billed_usd": 0.001562,
+        "rel_err": 0.0,
+        "measured_read_mult": 0.09999999999999999
+      },
+      "outcome": "hit"
+    },
+    {
+      "group": "O_hit600",
+      "rep": 1,
+      "step": 0,
+      "label": "write",
+      "expect": "write",
+      "provider": "openai",
+      "ttl": "auto",
+      "blocks": "X",
+      "planned_offset_s": 0,
+      "max_tokens": 16,
+      "status": 200,
+      "t_send": 0.0,
+      "offset_s": 0.0,
+      "latency_s": 1.28,
+      "gen_id": "gen-1792526094-TBSa6wodtVgRUlgdBC5X",
+      "resp_provider": "OpenAI",
+      "service_tier": "default",
+      "prompt_tokens": 3428,
+      "completion_tokens": 9,
+      "cached_tokens": 0,
+      "cache_write_tokens": 3425,
+      "cost": 0.017317,
+      "error": null,
+      "generation": {
+        "provider_name": "OpenAI",
+        "native_tokens_prompt": 3428,
+        "native_tokens_cached": 0,
+        "native_tokens_completion": 9,
+        "native_tokens_reasoning": 0,
+        "total_cost": 0.017317,
+        "service_tier": "default",
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "model": "openai/gpt-5.6-sol-20260709",
+        "cache_discount": -0.003425
+      },
+      "valid": true,
+      "discard_reason": null,
+      "price": {
+        "expected_usd": 0.017317000000000003,
+        "billed_usd": 0.017317,
+        "rel_err": -2.0034919165869455e-16,
+        "measured_write_mult": 1.2499999999999998
+      }
+    },
+    {
+      "group": "O_hit600",
+      "rep": 1,
+      "step": 1,
+      "label": "read",
+      "expect": "hit",
+      "provider": "openai",
+      "ttl": "auto",
+      "blocks": "X",
+      "planned_offset_s": 600,
+      "max_tokens": 16,
+      "status": 200,
+      "t_send": 600.0,
+      "offset_s": 600.0,
+      "latency_s": 1.8,
+      "gen_id": "gen-1792526694-5cnT6Rb5XsxXCGXP7MPc",
+      "resp_provider": "OpenAI",
+      "service_tier": "default",
+      "prompt_tokens": 3428,
+      "completion_tokens": 9,
+      "cached_tokens": 3425,
+      "cache_write_tokens": 0,
+      "cost": 0.001562,
+      "error": null,
+      "generation": {
+        "provider_name": "OpenAI",
+        "native_tokens_prompt": 3428,
+        "native_tokens_cached": 3425,
+        "native_tokens_completion": 9,
+        "native_tokens_reasoning": 0,
+        "total_cost": 0.001562,
+        "service_tier": "default",
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "model": "openai/gpt-5.6-sol-20260709",
+        "cache_discount": 0.01233
+      },
+      "valid": true,
+      "discard_reason": null,
+      "price": {
+        "expected_usd": 0.001562,
+        "billed_usd": 0.001562,
+        "rel_err": 0.0,
+        "measured_read_mult": 0.09999999999999999
+      },
+      "outcome": "hit"
+    },
+    {
+      "group": "O_hit600",
+      "rep": 2,
+      "step": 0,
+      "label": "write",
+      "expect": "write",
+      "provider": "openai",
+      "ttl": "auto",
+      "blocks": "X",
+      "planned_offset_s": 0,
+      "max_tokens": 16,
+      "status": 200,
+      "t_send": 2.0,
+      "offset_s": 0.0,
+      "latency_s": 1.43,
+      "gen_id": "gen-1792526096-HLbYaynVGm3HMopHFFQk",
+      "resp_provider": "OpenAI",
+      "service_tier": "default",
+      "prompt_tokens": 3428,
+      "completion_tokens": 9,
+      "cached_tokens": 0,
+      "cache_write_tokens": 3425,
+      "cost": 0.017317,
+      "error": null,
+      "generation": {
+        "provider_name": "OpenAI",
+        "native_tokens_prompt": 3428,
+        "native_tokens_cached": 0,
+        "native_tokens_completion": 9,
+        "native_tokens_reasoning": 0,
+        "total_cost": 0.017317,
+        "service_tier": "default",
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "model": "openai/gpt-5.6-sol-20260709",
+        "cache_discount": -0.003425
+      },
+      "valid": true,
+      "discard_reason": null,
+      "price": {
+        "expected_usd": 0.017317000000000003,
+        "billed_usd": 0.017317,
+        "rel_err": -2.0034919165869455e-16,
+        "measured_write_mult": 1.2499999999999998
+      }
+    },
+    {
+      "group": "O_hit600",
+      "rep": 2,
+      "step": 1,
+      "label": "read",
+      "expect": "hit",
+      "provider": "openai",
+      "ttl": "auto",
+      "blocks": "X",
+      "planned_offset_s": 600,
+      "max_tokens": 16,
+      "status": 200,
+      "t_send": 602.0,
+      "offset_s": 600.0,
+      "latency_s": 1.21,
+      "gen_id": "gen-1792526696-qul3SpA43KDM6HmbKM5O",
+      "resp_provider": "OpenAI",
+      "service_tier": "default",
+      "prompt_tokens": 3428,
+      "completion_tokens": 9,
+      "cached_tokens": 3425,
+      "cache_write_tokens": 0,
+      "cost": 0.001562,
+      "error": null,
+      "generation": {
+        "provider_name": "OpenAI",
+        "native_tokens_prompt": 3428,
+        "native_tokens_cached": 3425,
+        "native_tokens_completion": 9,
+        "native_tokens_reasoning": 0,
+        "total_cost": 0.001562,
+        "service_tier": "default",
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "model": "openai/gpt-5.6-sol-20260709",
+        "cache_discount": 0.01233
+      },
+      "valid": true,
+      "discard_reason": null,
+      "price": {
+        "expected_usd": 0.001562,
+        "billed_usd": 0.001562,
+        "rel_err": 0.0,
+        "measured_read_mult": 0.09999999999999999
+      },
+      "outcome": "hit"
+    },
+    {
+      "group": "O_hit600",
+      "rep": 3,
+      "step": 0,
+      "label": "write",
+      "expect": "write",
+      "provider": "openai",
+      "ttl": "auto",
+      "blocks": "X",
+      "planned_offset_s": 0,
+      "max_tokens": 16,
+      "status": 200,
+      "t_send": 16.0,
+      "offset_s": 0.0,
+      "latency_s": 1.12,
+      "gen_id": "gen-1792526110-ankY3UUfriRXbdxKe3hn",
+      "resp_provider": "OpenAI",
+      "service_tier": "default",
+      "prompt_tokens": 3430,
+      "completion_tokens": 9,
+      "cached_tokens": 0,
+      "cache_write_tokens": 3427,
+      "cost": 0.017327,
+      "error": null,
+      "generation": {
+        "provider_name": "OpenAI",
+        "native_tokens_prompt": 3430,
+        "native_tokens_cached": 0,
+        "native_tokens_completion": 9,
+        "native_tokens_reasoning": 0,
+        "total_cost": 0.017327,
+        "service_tier": "default",
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "model": "openai/gpt-5.6-sol-20260709",
+        "cache_discount": -0.003427
+      },
+      "valid": true,
+      "discard_reason": null,
+      "price": {
+        "expected_usd": 0.017327000000000002,
+        "billed_usd": 0.017327,
+        "rel_err": -2.002335633377742e-16,
+        "measured_write_mult": 1.2499999999999998
+      }
+    },
+    {
+      "group": "O_hit600",
+      "rep": 3,
+      "step": 1,
+      "label": "read",
+      "expect": "hit",
+      "provider": "openai",
+      "ttl": "auto",
+      "blocks": "X",
+      "planned_offset_s": 600,
+      "max_tokens": 16,
+      "status": 200,
+      "t_send": 616.0,
+      "offset_s": 600.0,
+      "latency_s": 1.99,
+      "gen_id": "gen-1792526710-o9tXBfMJeAk9bF0oPPeV",
+      "resp_provider": "OpenAI",
+      "service_tier": "default",
+      "prompt_tokens": 3430,
+      "completion_tokens": 9,
+      "cached_tokens": 3427,
+      "cache_write_tokens": 0,
+      "cost": 0.0015628,
+      "error": null,
+      "generation": {
+        "provider_name": "OpenAI",
+        "native_tokens_prompt": 3430,
+        "native_tokens_cached": 3427,
+        "native_tokens_completion": 9,
+        "native_tokens_reasoning": 0,
+        "total_cost": 0.0015628,
+        "service_tier": "default",
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "model": "openai/gpt-5.6-sol-20260709",
+        "cache_discount": 0.0123372
+      },
+      "valid": true,
+      "discard_reason": null,
+      "price": {
+        "expected_usd": 0.0015628000000000003,
+        "billed_usd": 0.0015628,
+        "rel_err": -1.3875123784047918e-16,
+        "measured_read_mult": 0.09999999999999999
+      },
+      "outcome": "hit"
+    },
+    {
+      "group": "O_miss2400",
+      "rep": 0,
+      "step": 0,
+      "label": "write",
+      "expect": "write",
+      "provider": "openai",
+      "ttl": "auto",
+      "blocks": "X",
+      "planned_offset_s": 0,
+      "max_tokens": 16,
+      "status": 200,
+      "t_send": 8.0,
+      "offset_s": 0.0,
+      "latency_s": 2.17,
+      "gen_id": "gen-1792526102-LHpMtUBpELoZtU7DUiyN",
+      "resp_provider": "OpenAI",
+      "service_tier": "default",
+      "prompt_tokens": 3430,
+      "completion_tokens": 9,
+      "cached_tokens": 0,
+      "cache_write_tokens": 3427,
+      "cost": 0.017327,
+      "error": null,
+      "generation": {
+        "provider_name": "OpenAI",
+        "native_tokens_prompt": 3430,
+        "native_tokens_cached": 0,
+        "native_tokens_completion": 9,
+        "native_tokens_reasoning": 0,
+        "total_cost": 0.017327,
+        "service_tier": "default",
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "model": "openai/gpt-5.6-sol-20260709",
+        "cache_discount": -0.003427
+      },
+      "valid": true,
+      "discard_reason": null,
+      "price": {
+        "expected_usd": 0.017327000000000002,
+        "billed_usd": 0.017327,
+        "rel_err": -2.002335633377742e-16,
+        "measured_write_mult": 1.2499999999999998
+      }
+    },
+    {
+      "group": "O_miss2400",
+      "rep": 0,
+      "step": 1,
+      "label": "read",
+      "expect": "miss",
+      "provider": "openai",
+      "ttl": "auto",
+      "blocks": "X",
+      "planned_offset_s": 2400,
+      "max_tokens": 16,
+      "status": 200,
+      "t_send": 2408.0,
+      "offset_s": 2400.0,
+      "latency_s": 1.26,
+      "gen_id": "gen-1792528502-eJsLKLZZW0fVUi9pcN8V",
+      "resp_provider": "OpenAI",
+      "service_tier": "default",
+      "prompt_tokens": 3430,
+      "completion_tokens": 9,
+      "cached_tokens": 0,
+      "cache_write_tokens": 3427,
+      "cost": 0.017327,
+      "error": null,
+      "generation": {
+        "provider_name": "OpenAI",
+        "native_tokens_prompt": 3430,
+        "native_tokens_cached": 0,
+        "native_tokens_completion": 9,
+        "native_tokens_reasoning": 0,
+        "total_cost": 0.017327,
+        "service_tier": "default",
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "model": "openai/gpt-5.6-sol-20260709",
+        "cache_discount": -0.003427
+      },
+      "valid": true,
+      "discard_reason": null,
+      "price": {
+        "expected_usd": 0.017327000000000002,
+        "billed_usd": 0.017327,
+        "rel_err": -2.002335633377742e-16,
+        "measured_write_mult": 1.2499999999999998
+      },
+      "outcome": "miss"
+    },
+    {
+      "group": "O_miss2400",
+      "rep": 1,
+      "step": 0,
+      "label": "write",
+      "expect": "write",
+      "provider": "openai",
+      "ttl": "auto",
+      "blocks": "X",
+      "planned_offset_s": 0,
+      "max_tokens": 16,
+      "status": 200,
+      "t_send": 10.0,
+      "offset_s": 0.0,
+      "latency_s": 1.97,
+      "gen_id": "gen-1792526104-wO06acWciD0HMGPlFAiD",
+      "resp_provider": "OpenAI",
+      "service_tier": "default",
+      "prompt_tokens": 3430,
+      "completion_tokens": 9,
+      "cached_tokens": 0,
+      "cache_write_tokens": 3427,
+      "cost": 0.017327,
+      "error": null,
+      "generation": {
+        "provider_name": "OpenAI",
+        "native_tokens_prompt": 3430,
+        "native_tokens_cached": 0,
+        "native_tokens_completion": 9,
+        "native_tokens_reasoning": 0,
+        "total_cost": 0.017327,
+        "service_tier": "default",
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "model": "openai/gpt-5.6-sol-20260709",
+        "cache_discount": -0.003427
+      },
+      "valid": true,
+      "discard_reason": null,
+      "price": {
+        "expected_usd": 0.017327000000000002,
+        "billed_usd": 0.017327,
+        "rel_err": -2.002335633377742e-16,
+        "measured_write_mult": 1.2499999999999998
+      }
+    },
+    {
+      "group": "O_miss2400",
+      "rep": 1,
+      "step": 1,
+      "label": "read",
+      "expect": "miss",
+      "provider": "openai",
+      "ttl": "auto",
+      "blocks": "X",
+      "planned_offset_s": 2400,
+      "max_tokens": 16,
+      "status": 200,
+      "t_send": 2410.0,
+      "offset_s": 2400.0,
+      "latency_s": 1.37,
+      "gen_id": "gen-1792528504-bbgBclV4I6oYkjJ7PHyr",
+      "resp_provider": "OpenAI",
+      "service_tier": "default",
+      "prompt_tokens": 3430,
+      "completion_tokens": 9,
+      "cached_tokens": 0,
+      "cache_write_tokens": 3427,
+      "cost": 0.017327,
+      "error": null,
+      "generation": {
+        "provider_name": "OpenAI",
+        "native_tokens_prompt": 3430,
+        "native_tokens_cached": 0,
+        "native_tokens_completion": 9,
+        "native_tokens_reasoning": 0,
+        "total_cost": 0.017327,
+        "service_tier": "default",
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "model": "openai/gpt-5.6-sol-20260709",
+        "cache_discount": -0.003427
+      },
+      "valid": true,
+      "discard_reason": null,
+      "price": {
+        "expected_usd": 0.017327000000000002,
+        "billed_usd": 0.017327,
+        "rel_err": -2.002335633377742e-16,
+        "measured_write_mult": 1.2499999999999998
+      },
+      "outcome": "miss"
+    },
+    {
+      "group": "O_miss2400",
+      "rep": 2,
+      "step": 0,
+      "label": "write",
+      "expect": "write",
+      "provider": "openai",
+      "ttl": "auto",
+      "blocks": "X",
+      "planned_offset_s": 0,
+      "max_tokens": 16,
+      "status": 200,
+      "t_send": 20.0,
+      "offset_s": 0.0,
+      "latency_s": 1.44,
+      "gen_id": "gen-1792526114-U58qHM8bCgfrrSeJ9vc6",
+      "resp_provider": "OpenAI",
+      "service_tier": "default",
+      "prompt_tokens": 3430,
+      "completion_tokens": 9,
+      "cached_tokens": 0,
+      "cache_write_tokens": 3427,
+      "cost": 0.017327,
+      "error": null,
+      "generation": {
+        "provider_name": "OpenAI",
+        "native_tokens_prompt": 3430,
+        "native_tokens_cached": 0,
+        "native_tokens_completion": 9,
+        "native_tokens_reasoning": 0,
+        "total_cost": 0.017327,
+        "service_tier": "default",
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "model": "openai/gpt-5.6-sol-20260709",
+        "cache_discount": -0.003427
+      },
+      "valid": true,
+      "discard_reason": null,
+      "price": {
+        "expected_usd": 0.017327000000000002,
+        "billed_usd": 0.017327,
+        "rel_err": -2.002335633377742e-16,
+        "measured_write_mult": 1.2499999999999998
+      }
+    },
+    {
+      "group": "O_miss2400",
+      "rep": 2,
+      "step": 1,
+      "label": "read",
+      "expect": "miss",
+      "provider": "openai",
+      "ttl": "auto",
+      "blocks": "X",
+      "planned_offset_s": 2400,
+      "status": null,
+      "skipped": "budget",
+      "t_send": null,
+      "valid": false,
+      "discard_reason": "budget_skip"
+    },
+    {
+      "group": "O_miss2400",
+      "rep": 3,
+      "step": 0,
+      "label": "write",
+      "expect": "write",
+      "provider": "openai",
+      "ttl": "auto",
+      "blocks": "X",
+      "planned_offset_s": 0,
+      "max_tokens": 16,
+      "status": 200,
+      "t_send": 14.0,
+      "offset_s": 0.0,
+      "latency_s": 1.44,
+      "gen_id": "gen-1792526108-vkQcrDgpEXFY2HMaaEnK",
+      "resp_provider": "OpenAI",
+      "service_tier": "default",
+      "prompt_tokens": 3430,
+      "completion_tokens": 10,
+      "cached_tokens": 0,
+      "cache_write_tokens": 3427,
+      "cost": 0.017347,
+      "error": null,
+      "generation": {
+        "provider_name": "OpenAI",
+        "native_tokens_prompt": 3430,
+        "native_tokens_cached": 0,
+        "native_tokens_completion": 10,
+        "native_tokens_reasoning": 0,
+        "total_cost": 0.017347,
+        "service_tier": "default",
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "model": "openai/gpt-5.6-sol-20260709",
+        "cache_discount": -0.003427
+      },
+      "valid": true,
+      "discard_reason": null,
+      "price": {
+        "expected_usd": 0.017347,
+        "billed_usd": 0.017347,
+        "rel_err": 0.0,
+        "measured_write_mult": 1.25
+      }
+    },
+    {
+      "group": "O_miss2400",
+      "rep": 3,
+      "step": 1,
+      "label": "read",
+      "expect": "miss",
+      "provider": "openai",
+      "ttl": "auto",
+      "blocks": "X",
+      "planned_offset_s": 2400,
+      "max_tokens": 16,
+      "status": 200,
+      "t_send": 2414.0,
+      "offset_s": 2400.0,
+      "latency_s": 1.2,
+      "gen_id": "gen-1792528508-7aK5WwXNWh4OxUjRQ0Bc",
+      "resp_provider": "OpenAI",
+      "service_tier": "default",
+      "prompt_tokens": 3430,
+      "completion_tokens": 9,
+      "cached_tokens": 0,
+      "cache_write_tokens": 3427,
+      "cost": 0.017327,
+      "error": null,
+      "generation": {
+        "provider_name": "OpenAI",
+        "native_tokens_prompt": 3430,
+        "native_tokens_cached": 0,
+        "native_tokens_completion": 9,
+        "native_tokens_reasoning": 0,
+        "total_cost": 0.017327,
+        "service_tier": "default",
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "model": "openai/gpt-5.6-sol-20260709",
+        "cache_discount": -0.003427
+      },
+      "valid": true,
+      "discard_reason": null,
+      "price": {
+        "expected_usd": 0.017327000000000002,
+        "billed_usd": 0.017327,
+        "rel_err": -2.002335633377742e-16,
+        "measured_write_mult": 1.2499999999999998
+      },
+      "outcome": "miss"
+    }
+  ]
+}
